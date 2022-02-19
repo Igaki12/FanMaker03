@@ -18,7 +18,7 @@ header {
   bottom: 0;
   position: fixed;
   padding-top: 20px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
 #operating-screen {
   width: 375px;
@@ -60,10 +60,11 @@ header {
   text-align: center;
   height: auto;
 }
-#edit-font-head {
+.panel-head {
   display: flex;
   justify-content: space-between;
   margin: 0 20px 0 20px;
+  color: #555555;
 }
 .headImg {
   width: auto;
@@ -102,5 +103,62 @@ header {
   margin: 50px 10px 0 10px;
   height: auto;
   overflow-x: auto;
+  white-space: nowrap;
+}
+#edit-background-panel {
+  font-size: large;
+  margin-top: -5px;
+  color: #555555;
+}
+.now-color-palette {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: 60px 60px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#nowColorBtn {
+  margin: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  border: 2px solid #777777;
+  background-color: aqua;
+  grid-row: 1/2;
+  grid-column: 1;
+}
+.palette:focus {
+  outline: none;
+  box-shadow: 0 0 0 6px #cbd6ee;
+}
+.colorBtn {
+  margin: 2px;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  border: 2px solid #777777;
+}
+.x-slider-now-palette {
+  grid-column: 2;
+  grid-row: 2;
+  padding: 5px 10px;
+  width: 200px;
+  /* display: flex; */
+  height: auto;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+.color-palette {
+  margin: 10px 20px;
+  text-align: start;
+}
+.x-slider-palette {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 355px;
+  margin: 0 auto;
+  /* display: flex; */
+  height: auto;
+  overflow-x: scroll;
   white-space: nowrap;
 }
