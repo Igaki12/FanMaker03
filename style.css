@@ -155,10 +155,25 @@ header {
 .x-slider-palette {
   padding-top: 5px;
   padding-bottom: 5px;
-  width: 355px;
+  width: auto;
   margin: 0 auto;
   /* display: flex; */
   height: auto;
   overflow-x: scroll;
   white-space: nowrap;
+}
+.additional-select {
+  width: 100%;
+  height: auto;
+}
+.additional-select-btn {
+  display: flex;
+  height: 30px;
+  margin: 0 20px 0 auto;
+  color: #555555;
+  font-size: large;
+  border-radius: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: rgb(255, 197, 176);
 }
