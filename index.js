@@ -10,8 +10,8 @@ const additionalBackgroundPanel = document.getElementById('additional-background
 console.log()
 
 additionalBackgroundOpenBtn.addEventListener('click',() => {
-  console.log(additionalBackgroundPanel.style);
-  additionalBackgroundPanel.display = 'display';
+  console.log(additionalBackgroundPanel.style.display);
+  additionalBackgroundPanel.style.display = 'display';
   additionalBackgroundOpenBtn.style.display = 'none';
 
   additionalBackgroundCloseBtn.addEventListener('click',() => {
