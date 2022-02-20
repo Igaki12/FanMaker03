@@ -162,21 +162,122 @@ header {
   overflow-x: scroll;
   white-space: nowrap;
 }
-.additional-select {
+.additional {
   width: 100%;
   height: auto;
 }
-.additional-select-btn {
+.additional-btn {
   display: flex;
   height: 30px;
-  margin: 0 20px 0 auto;
+  /* margin: 0 20px 0 auto; */
   color: #555555;
   font-size: large;
   border-radius: 15px;
   padding-left: 20px;
   padding-right: 10px;
+  margin: 0 20px 0 auto;
   background-color: rgb(255, 197, 176);
 }
-.additional-select-btn > p {
+.additional-close-btn {
+  display: flex;
+  height: 50px;
+  font-weight: bold;
+  margin: 0 auto 0 20px;
+  -webkit-text-stroke: 1px #fff;
+  background-color: rgb(94, 105, 253);
+  color: #555555;
+  font-size: large;
+  border-radius: 25px;
+  padding: 10px 10px 10px 20px;
+  margin: 0 auto 0 20px;
+}
+.additional-btn > p {
   line-height: 30px;
+}
+.additional-color-palette {
+  width: 100%;
+  min-height: 100px;
+  /* flex-direction: column; */
+}
+.range-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-top: 30vh; */
+}
+.rs-range {
+  margin-top: 29px;
+  width: 200px;
+  -webkit-appearance: none;
+}
+.rs-range:focus {
+  outline: none;
+}
+.rs-range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  box-shadow: none;
+  /* background: red; */
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+#rs-range-line-red {
+  background: red;
+}
+#rs-range-line-green {
+  background: green;
+}
+#rs-range-line-blue {
+  background: blue;
+}
+.rs-range::-moz-range-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  box-shadow: none;
+  background: #777777;
+  border-radius: 0px;
+  border: 0px solid #010101;
+}
+
+.rs-range::-webkit-slider-thumb {
+  box-shadow: none;
+  border: 0px solid #777777;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+  height: 42px;
+  width: 22px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 1);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -20px;
+}
+.rs-range::-moz-range-thumb {
+  box-shadow: none;
+  border: 0px solid #777777;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+  height: 42px;
+  width: 22px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 1);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -20px;
+}
+.rs-range::-moz-focus-outer {
+  border: 0;
+}
+.rs-label {
+  font-size: large;
+  margin-right: 10px;
+  margin-top: 27px;
+}
+.rangeBtn {
+  width: 30px;
+  height: 40px;
+  border: 1px solid #777777;
+  border-radius: 5px;
+  margin: 27px 0px auto 10px;
+  font-size: 25px;
 }
