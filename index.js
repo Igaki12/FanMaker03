@@ -14,5 +14,5 @@ additionalBackgroundOpenBtn.addEventListener('click',() => {
   additionalBackgroundCloseBtn.addEventListener('click',() => {
     additionalBackgroundPanel.style.display = 'none';
     additionalBackgroundOpenBtn.style.display = 'display';
-  });
-});
+  },{passive:false});
+},{passive:false});
