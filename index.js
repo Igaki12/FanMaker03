@@ -7,7 +7,10 @@ const additionalBackgroundPanel = document.getElementById('additional-background
 //   additionalBackgroundPanel.style.display = 'none';
 // };
 
+console.log()
+
 additionalBackgroundOpenBtn.addEventListener('click',() => {
+  console.log(additionalBackgroundPanel.style);
   additionalBackgroundPanel.style.display = 'display';
   additionalBackgroundOpenBtn.style.display = 'none';
 

@@ -198,8 +198,10 @@ header {
 .additional-color-palette {
   width: 100%;
   min-height: 100px;
-  display: none;
   /* flex-direction: column; */
+}
+#additional-background-panel {
+  display: none;
 }
 .range-slider {
   display: flex;
