@@ -3,9 +3,9 @@ const additionalBackgroundCloseBtn = document.getElementById('additional-backgro
 const additionalBackgroundRow = document.getElementById('additional-background-row');
 const additionalBackgroundPanel = document.getElementById('additional-background-panel');
 
-window.onload(
-  additionalBackgroundPanel.style.display = 'none'
-);
+window.onload = function() {
+  additionalBackgroundPanel.style.display = 'none';
+};
 
 additionalBackgroundOpenBtn.addEventListener('click',() => {
   additionalBackgroundPanel.style.display = 'display';
