@@ -11,7 +11,7 @@ console.log()
 
 additionalBackgroundOpenBtn.addEventListener('click',() => {
   console.log(additionalBackgroundPanel.style);
-  additionalBackgroundPanel.style.display = 'display';
+  additionalBackgroundPanel.display = 'display';
   additionalBackgroundOpenBtn.style.display = 'none';
 
   additionalBackgroundCloseBtn.addEventListener('click',() => {
