@@ -19,6 +19,7 @@ header {
   position: fixed;
   padding-top: 20px;
   padding-bottom: 30px;
+  transition: 300ms;
 }
 #operating-screen {
   width: 375px;
