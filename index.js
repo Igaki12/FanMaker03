@@ -12,10 +12,10 @@ console.log()
 additionalBackgroundOpenBtn.addEventListener('click',() => {
   console.log(additionalBackgroundPanel.style.display);
   additionalBackgroundPanel.style = "display: display;";
-  additionalBackgroundOpenBtn.style.display = 'none';
+  additionalBackgroundOpenBtn.style = "display: none;"
 
   additionalBackgroundCloseBtn.addEventListener('click',() => {
-    additionalBackgroundPanel.style.display = 'none';
-    additionalBackgroundOpenBtn.style.display = 'display';
+    additionalBackgroundPanel.style = 'display: none;';
+    additionalBackgroundOpenBtn.style = "display: display;";
   },{passive:false});
 },{passive:false});
