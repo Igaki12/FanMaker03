@@ -10,12 +10,17 @@ const additionalBackgroundPanel = document.getElementById('additional-background
 console.log()
 
 additionalBackgroundOpenBtn.addEventListener('click',() => {
-  console.log(additionalBackgroundPanel.style.display);
-  additionalBackgroundPanel.style = "display: display;";
-  additionalBackgroundOpenBtn.style = "display: none;"
+  setTimeout(() => {
+    additionalBackgroundPanel.style = "display: display;";
+    additionalBackgroundOpenBtn.style = "display: none;";
+  },500);
+
 
   additionalBackgroundCloseBtn.addEventListener('click',() => {
-    additionalBackgroundPanel.style = 'display: none;';
-    additionalBackgroundOpenBtn.style = "display: display;";
+    setTimeout(() => {
+      additionalBackgroundPanel.style = 'display: none;';
+      additionalBackgroundOpenBtn.style = "display: display;";
+    },500);
+
   },{passive:false});
 },{passive:false});
