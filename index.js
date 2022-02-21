@@ -11,14 +11,14 @@ console.log()
 
 additionalBackgroundOpenBtn.addEventListener('click',() => {
   setTimeout(() => {
-    additionalBackgroundPanel.style = "display: display;";
+    additionalBackgroundPanel.style = "height: auto;";
     additionalBackgroundOpenBtn.style = "display: none;";
   },500);
 
 
   additionalBackgroundCloseBtn.addEventListener('click',() => {
     setTimeout(() => {
-      additionalBackgroundPanel.style = 'display: none;';
+      additionalBackgroundPanel.style = 'height: 0;';
       additionalBackgroundOpenBtn.style = "display: display;";
     },500);
 
