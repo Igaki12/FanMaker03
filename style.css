@@ -37,7 +37,7 @@ header {
 }
 .iconButton {
   width: 120px;
-  height: 120px;
+  max-height: 120px;
   margin-right: 10px;
   margin-left: 10px;
   /* background: none;
@@ -200,9 +200,9 @@ header {
   min-height: 100px;
   /* flex-direction: column; */
 }
-#additional-background-panel {
+/* #additional-background-panel {
   display: none;
-}
+} */
 .range-slider {
   display: flex;
   align-items: center;
