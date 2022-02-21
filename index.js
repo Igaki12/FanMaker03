@@ -13,14 +13,14 @@ additionalBackgroundOpenBtn.addEventListener('click',() => {
   setTimeout(() => {
     additionalBackgroundPanel.style = "display: display;";
     additionalBackgroundOpenBtn.style = "display: none;";
-  },500);
+  },100);
 
 
   additionalBackgroundCloseBtn.addEventListener('click',() => {
     setTimeout(() => {
       additionalBackgroundPanel.style = 'display: none;';
       additionalBackgroundOpenBtn.style = "display: display;";
-    },500);
+    },100);
 
   },{passive:false});
 },{passive:false});
