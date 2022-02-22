@@ -4,20 +4,17 @@ const additionalBackgroundRow = document.getElementById('additional-background-r
 const additionalBackgroundPanel = document.getElementById('additional-background-panel');
 const editBackgroundBack = document.getElementById('edit-background-back-btn');
 const editBackgroundPanel = document.getElementById('edit-background-panel');
+const startPanel = document.getElementById('start-panel');
 const editFontPanel = document.getElementById('edit-font-panel');
-// window.onload = function() {
-//   additionalBackgroundPanel.style.display = 'none';
-// };
-
 console.log("あ");
-const openEditFontPanel = () => {
-  editFontPanel.style = "display: display;";
+const backStartPanel = () => {
+  startPanel.style = "display: display;";
   editBackgroundPanel.style = "display: none";
 };
 const openBackgroundDetailPanel = () => {
   additionalBackgroundPanel.style = "display: display;";
   additionalBackgroundOpenBtn.style = "display: none;";
-  editBackgroundBack.removeEventListener('click',openEditFontPanel);
+  editBackgroundBack.removeEventListener('click',backStartPanel);
 }
 const closeBackgroundDetailPanel = () => {
   additionalBackgroundPanel.style = 'display: none;';
@@ -27,10 +24,10 @@ const closeBackgroundDetailPanel = () => {
 
 }
 
-additionalBackgroundOpenBtn.addEventListener('click',() => {
-  setTimeout(openBackgroundDetailPanel,100);
-  additionalBackgroundCloseBtn.addEventListener('click',closeBackgroundDetailPanel);
-  editBackgroundBack.addEventListener('click',closeBackgroundDetailPanel);
-},{passive:false});
-editBackgroundBack.addEventListener('click',openEditFontPanel);
+// additionalBackgroundOpenBtn.addEventListener('click',() => {
+//   setTimeout(openBackgroundDetailPanel,100);
+//   additionalBackgroundCloseBtn.addEventListener('click',closeBackgroundDetailPanel);
+//   editBackgroundBack.addEventListener('click',closeBackgroundDetailPanel);
+// },{passive:false});
+// editBackgroundBack.addEventListener('click',backStartPanel);
 
