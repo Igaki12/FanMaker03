@@ -26,12 +26,12 @@ const closeBackgroundDetailPanel = () => {
   additionalBackgroundCloseBtn.removeEventListener('click',closeBackgroundDetailPanel);
   editBackgroundBack.removeEventListener('click',closeBackgroundDetailPanel);
 }
-
-createFontBtn.addEventListener('click',openEditFontPanel);
 const openEditFontPanel = () => {
   editFontPanel.style = "display: display;";
   startPanel.style = "display: none;";
 }
+createFontBtn.addEventListener('click',openEditFontPanel);
+
 
 // additionalBackgroundOpenBtn.addEventListener('click',() => {
 //   setTimeout(openBackgroundDetailPanel,100);
