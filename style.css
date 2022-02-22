@@ -103,6 +103,7 @@ header > p {
   background-color: #dfdfdf;
   border: 1px solid #aaaaaa;
   border-radius: 4px;
+  font-size: large;
 }
 .ef input[type='text']:focus {
   border: 1px solid #da3c41;
