@@ -30,7 +30,12 @@ const openEditFontPanel = () => {
   editFontPanel.style = "display: display;";
   startPanel.style = "display: none;";
 }
+const openBackgroundPanel = () => {
+  editBackgroundPanel.style = "display: display;";
+  startPanel.style = "display: none;";
+}
 createFontBtn.addEventListener('click',openEditFontPanel);
+editBackgroundBtn.addEventListener('click',openBackgroundPanel);
 
 
 // additionalBackgroundOpenBtn.addEventListener('click',() => {
