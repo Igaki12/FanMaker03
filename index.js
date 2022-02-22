@@ -3,15 +3,21 @@ const additionalBackgroundCloseBtn = document.getElementById('additional-backgro
 const additionalBackgroundRow = document.getElementById('additional-background-row');
 const additionalBackgroundPanel = document.getElementById('additional-background-panel');
 const editBackgroundBack = document.getElementById('edit-background-back-btn');
-
+const editBackgroundPanel = document.getElementById('edit-background-panel');
+const editFontPanel = document.getElementById('esit-font-panel');
 // window.onload = function() {
 //   additionalBackgroundPanel.style.display = 'none';
 // };
 
-console.log()
+console.log("あ");
+const openEditFontPanel = () => {
+  editFontPanel.style = "display: display;";
+  editBackgroundPanel.style = "display: none";
+};
 const openBackgroundDetailPanel = () => {
   additionalBackgroundPanel.style = "display: display;";
   additionalBackgroundOpenBtn.style = "display: none;";
+  editBackgroundBack.removeEventListener('click',openEditFontPanel);
 }
 const closeBackgroundDetailPanel = () => {
   additionalBackgroundPanel.style = 'display: none;';
@@ -26,3 +32,5 @@ additionalBackgroundOpenBtn.addEventListener('click',() => {
   additionalBackgroundCloseBtn.addEventListener('click',closeBackgroundDetailPanel);
   editBackgroundBack.addEventListener('click',closeBackgroundDetailPanel);
 },{passive:false});
+editBackgroundBack.addEventListener('click',openEditFontPanel);
+
