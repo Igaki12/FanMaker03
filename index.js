@@ -9,24 +9,20 @@ const editBackgroundBack = document.getElementById('edit-background-back-btn');
 // };
 
 console.log()
+const openBackgroundDetailPanel = () => {
+  additionalBackgroundPanel.style = "display: display;";
+  additionalBackgroundOpenBtn.style = "display: none;";
+}
+const closeBackgroundDetailPanel = () => {
+  additionalBackgroundPanel.style = 'display: none;';
+  additionalBackgroundOpenBtn.style = "display: display;";
+  additionalBackgroundCloseBtn.removeEventListener('click',closeBackgroundDetailPanel);
+  editBackgroundBack.removeEventListener('click',closeBackgroundDetailPanel);
+
+}
 
 additionalBackgroundOpenBtn.addEventListener('click',() => {
-  setTimeout(() => {
-    additionalBackgroundPanel.style = "display: display;";
-    additionalBackgroundOpenBtn.style = "display: none;";
-  },100);
-
-
-  additionalBackgroundCloseBtn.addEventListener('click',() => {
-    setTimeout(() => {
-      additionalBackgroundPanel.style = 'display: none;';
-      additionalBackgroundOpenBtn.style = "display: display;";
-    },100);
-  },{passive:false});
-  editBackgroundBack.addEventListener('click',() => {
-    setTimeout(() => {
-      additionalBackgroundPanel.style = 'display: none;';
-      additionalBackgroundOpenBtn.style = "display: display;";
-    },100);
-  },{passive:false});
+  setTimeout(openBackgroundDetailPanel,100);
+  additionalBackgroundCloseBtn.addEventListener('click',closeBackgroundDetailPanel);
+  editBackgroundBack.addEventListener('click',closeBackgroundDetailPanel);
 },{passive:false});
