@@ -3,18 +3,18 @@
   padding: 0;
 }
 header {
-  margin-right: 10px;
-  margin-left: 10px;
+  padding-right: 5%;
+  padding-left: 5%;
   display: flex;
   position: fixed;
   justify-content: space-between;
   top: 0;
-  width: auto;
-  height: 60px;
+  width: 90%;
+  height: 50px;
   background-color: rgb(189, 189, 189);
 }
 header > p {
-  line-height: 60px;
+  line-height: 50px;
 }
 .control-panel {
   width: 100%;
