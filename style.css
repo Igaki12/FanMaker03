@@ -3,13 +3,13 @@
   padding: 0;
 }
 header {
-  padding-right: 10px;
-  padding-left: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
   display: flex;
   position: fixed;
   justify-content: space-between;
   top: 0;
-  width: 100%;
+  width: auto;
   height: 60px;
   background-color: rgb(189, 189, 189);
 }
