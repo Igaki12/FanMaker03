@@ -26,6 +26,7 @@ const closeBackgroundDetailPanel = () => {
   additionalBackgroundOpenBtn.style = "display: display;";
   additionalBackgroundCloseBtn.removeEventListener('click',closeBackgroundDetailPanel);
   editBackgroundBack.removeEventListener('click',closeBackgroundDetailPanel);
+  editBackgroundBack.addEventListener('click',backStartPanel);
 }
 const openEditFontPanel = () => {
   editFontPanel.style = "display: display;";
