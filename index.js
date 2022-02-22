@@ -12,7 +12,7 @@ const createFontBtn = document.getElementById('create-font-btn');
 console.log("あ");
 const backStartPanel = () => {
   startPanel.style = "display: display;";
-  editBackgroundPanel.style = "display: none";
+  editFontPanel.style = "display: none";
   editBackgroundPanel.style = "display: none";
 };
 
