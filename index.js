@@ -11,6 +11,7 @@ const editBackgroundBtn = document.getElementById('edit-background-btn');
 const createFontBtn = document.getElementById('create-font-btn');
 const editAnglePanel = document.getElementById('edit-angle-panel');
 const editAngleBack = document.getElementById('edit-angle-back-btn');
+const angleBtn = document.getElementById('angle-btn');
 console.log("あ");
 const backStartPanel = () => {
   startPanel.style = "display: display;";
@@ -51,6 +52,7 @@ editBackgroundBtn.addEventListener('click',openBackgroundPanel);
 editFontBack.addEventListener('click',backStartPanel);
 editBackgroundBack.addEventListener('click',backStartPanel);
 editAngleBack.addEventListener('click',closeEditAnglePanel);
+angleBtn.addEventListener('click',openEditAnglePanel);
 additionalBackgroundOpenBtn.addEventListener('click',() => {
   setTimeout(openBackgroundDetailPanel,100);
   editBackgroundBack.removeEventListener('click',backStartPanel);
