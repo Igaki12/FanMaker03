@@ -13,6 +13,7 @@ console.log("あ");
 const backStartPanel = () => {
   startPanel.style = "display: display;";
   editBackgroundPanel.style = "display: none";
+  editBackgroundPanel.style = "display: none";
 };
 
 const openBackgroundDetailPanel = () => {
@@ -29,6 +30,7 @@ const closeBackgroundDetailPanel = () => {
 const openEditFontPanel = () => {
   editFontPanel.style = "display: display;";
   startPanel.style = "display: none;";
+
 }
 const openBackgroundPanel = () => {
   editBackgroundPanel.style = "display: display;";
@@ -36,12 +38,14 @@ const openBackgroundPanel = () => {
 }
 createFontBtn.addEventListener('click',openEditFontPanel);
 editBackgroundBtn.addEventListener('click',openBackgroundPanel);
+editFontBack.addEventListener('click',backStartPanel);
+editBackgroundBack.addEventListener('click',backStartPanel);
+additionalBackgroundOpenBtn.addEventListener('click',() => {
+  setTimeout(openBackgroundDetailPanel,100);
+  editBackgroundBack.removeEventListener('click',backStartPanel);
+  additionalBackgroundCloseBtn.addEventListener('click',closeBackgroundDetailPanel);
+  editBackgroundBack.addEventListener('click',closeBackgroundDetailPanel);
+},{passive:false});
 
 
-// additionalBackgroundOpenBtn.addEventListener('click',() => {
-//   setTimeout(openBackgroundDetailPanel,100);
-//   additionalBackgroundCloseBtn.addEventListener('click',closeBackgroundDetailPanel);
-//   editBackgroundBack.addEventListener('click',closeBackgroundDetailPanel);
-// },{passive:false});
-// editBackgroundBack.addEventListener('click',backStartPanel);
 
