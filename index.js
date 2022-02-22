@@ -4,7 +4,7 @@ const additionalBackgroundRow = document.getElementById('additional-background-r
 const additionalBackgroundPanel = document.getElementById('additional-background-panel');
 const editBackgroundBack = document.getElementById('edit-background-back-btn');
 const editBackgroundPanel = document.getElementById('edit-background-panel');
-const editFontPanel = document.getElementById('esit-font-panel');
+const editFontPanel = document.getElementById('edit-font-panel');
 // window.onload = function() {
 //   additionalBackgroundPanel.style.display = 'none';
 // };
