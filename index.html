@@ -22,6 +22,23 @@
       <img src="./img/uchiwa-background.png" id="backgroundImg">
     </div>
     <div class="control-panel">
+      <div class="edit-fontsize-panel">
+        <div class="panel-head">
+          <button class="headBtn" id="edit-fontsize-back-btn">
+            <img src="./img/arrow-left-icon.png" class="headImg">
+          </button>
+          <p>大きさを調整</p>
+          <button class="headBtn">
+            <img src="./img/reload-icon.png" class="headImg">
+          </button >
+        </div>
+        <div id="rs-bullet-fontsize" class="rs-label">255</div>
+        <div class="range-slider">
+          <input id="rs-range-line-fontsize" class="rs-range" type="range" value="0" min="0" max="255">
+          <button class="rangeBtn">＋</button>
+          <button class="rangeBtn">－</button>
+        </div>
+      </div>
       <div id="start-panel">
         <button class="iconButton" id="create-font-btn">
           <img src="./img/create-font-icon.png" class="btnImg">
@@ -70,6 +87,7 @@
           </button>
         </div>
       </div>
+
       <div id="edit-angle-panel" style="display: none;">
         <div class="panel-head">
           <button class="headBtn" id="edit-angle-back-btn">
