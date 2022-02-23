@@ -16,12 +16,15 @@ const createFontBtn = document.getElementById('create-font-btn');
 const editAnglePanel = document.getElementById('edit-angle-panel');
 const editFontcolorPanel = document.getElementById('edit-fontcolor-panel');
 const editFontsizePanel = document.getElementById('edit-fontsize-panel');
+const editFontframePanel = document.getElementById('edit-fontrame-panel');
 const editAngleBack = document.getElementById('edit-angle-back-btn');
 const fontsizeBack = document.getElementById('edit-fontsize-back-btn');
 const fontcolorBack = document.getElementById('edit-fontcolor-back-btn');
+const fontframeBack = document.getElementById('edit-fontframe-back-btn');
 const angleBtn = document.getElementById('angle-btn');
 const fontcolorBtn = document.getElementById('fontcolor-btn');
 const fontsizeBtn = document.getElementById('fontsize-btn');
+const fontframeBtn = document.getElementById('fontframe-btn');
 
 console.log("あ");
 const backStartPanel = () => {
@@ -86,6 +89,14 @@ const closeEditFontcolorPanel = () => {
   editFontcolorPanel.style = "display: none";
   editFontPanel.style = "display: display";
 }
+const openEditFontframePanel = () =>{
+  editFontframePanel.style = "display: display;";
+  editFontPanel.style = "display: none;";
+}
+const closeEditFontframePanel = () => {
+  editFontframePanel.style = "display: none;";
+  editFontPanel.style = "display: display;";
+}
 createFontBtn.addEventListener('click',openEditFontPanel);
 editBackgroundBtn.addEventListener('click',openBackgroundPanel);
 editFontBack.addEventListener('click',backStartPanel);
@@ -107,7 +118,20 @@ additionalFontcolorOpenBtn.addEventListener('click',() => {
   fontcolorBack.removeEventListener('click',closeEditFontcolorPanel);
   additionalFontcolorCloseBtn.addEventListener('click',closeFontcolorDetailPanel);
   fontcolorBack.addEventListener('click',closeFontcolorDetailPanel);
+});
+
+const fontframeDown = document.getElementById('fontframe-down-btn');
+const fontframeUp = document.getElementById('fontframe-up-btn');
+const fontframeNumber = document.getElementById('fontframe-number');
+fontframeDown.addEventListener('click', () =>{
+  if(parseInt(fontframeNumber.textContent) < 1) return;
+  fontframeNumber.textContent = parseInt(fontframeNumber.textContent) - 1;
 })
+fontframeUp.addEventListener('click',() => {
+  if(parseInt(fontframeNumber.textContent) > 5) return;
+  fontframeNumber.textContent = parseInt(fontframeNumber.textContent) - 1;
+})
+
 
 
 
