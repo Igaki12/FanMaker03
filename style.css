@@ -303,6 +303,15 @@ header > p {
   border-radius: 3px;
   border: 0px solid #010101;
 }
+#rs-range-line-font-red {
+  background: red;
+}
+#rs-range-line-font-green {
+  background: green;
+}
+#rs-range-line-font-blue {
+  background: blue;
+}
 #rs-range-line-red {
   background: red;
 }
