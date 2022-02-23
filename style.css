@@ -42,6 +42,25 @@ header > p {
   border: none;
   background-color: bisque;
 }
+.fontframe-flex {
+  display: flex;
+  width: 100%;
+  margin: 50px auto;
+  justify-content: center;
+}
+.fontframe-flex > p {
+  line-height: 90px;
+  width: 120px;
+  text-align: center;
+  font-size: 45px;
+}
+.fontframe-flex > button {
+  font-size: 60px;
+  width: 90px;
+  height: 90px;
+  border-radius: 45px;
+  border: 2px solid #555555;
+}
 .iconButton {
   width: 120px;
   height: 120px;
