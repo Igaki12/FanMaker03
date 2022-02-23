@@ -41,10 +41,21 @@ const closeBackgroundDetailPanel = () => {
   editBackgroundBack.removeEventListener('click',closeBackgroundDetailPanel);
   editBackgroundBack.addEventListener('click',backStartPanel);
 }
+const openFontcolorDetailPanel = () => {
+  additionalFontcolorPanel.style = "display: display;";
+  additionalFontcolorOpenBtn.style = "display: none;";
+  fontcolorBack.removeEventListener('click',closeEditFontcolorPanel);
+}
+const closeFontcolorDetailPanel = () => {
+  additionalFontcolorPanel.style = 'display: none;';
+  additionalFontcolorOpenBtn.style = "display: display;";
+  additionalFontcolorCloseBtn.removeEventListener('click',closeFontcolorDetailPanel);
+  fontcolorBack.removeEventListener('click',closeFontcolorDetailPanel);
+  fontcolorBack.addEventListener('click',backStartPanel);
+}
 const openEditFontPanel = () => {
   editFontPanel.style = "display: display;";
   startPanel.style = "display: none;";
-
 }
 const openBackgroundPanel = () => {
   editBackgroundPanel.style = "display: display;";
@@ -90,6 +101,12 @@ additionalBackgroundOpenBtn.addEventListener('click',() => {
   additionalBackgroundCloseBtn.addEventListener('click',closeBackgroundDetailPanel);
   editBackgroundBack.addEventListener('click',closeBackgroundDetailPanel);
 },{passive:false});
+additionalFontcolorOpenBtn.addEventListener('click',() => {
+  setTimeout(openFontcolorDetailPanel,100);
+  fontcolorBack.removeEventListener('click',closeEditFontcolorPanel);
+  additionalFontcolorCloseBtn.addEventListener('click',closeFontcolorDetailPanel);
+  fontcolorBack.addEventListener('click',closeFontcolorDetailPanel);
+})
 
 
 
