@@ -107,6 +107,8 @@ fontsizeBtn.addEventListener('click',openEditFontsizePanel);
 fontsizeBack.addEventListener('click',closeEditFontsizePanel);
 fontcolorBtn.addEventListener('click',openEditFontcolorPanel);
 fontcolorBack.addEventListener('click',closeEditFontcolorPanel);
+fontframeBtn.addEventListener('click',openEditFontframePanel);
+fontframeBack.addEventListener('click',closeEditFontframePanel);
 additionalBackgroundOpenBtn.addEventListener('click',() => {
   setTimeout(openBackgroundDetailPanel,100);
   editBackgroundBack.removeEventListener('click',backStartPanel);
