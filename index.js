@@ -47,11 +47,11 @@ const openFontcolorDetailPanel = () => {
   fontcolorBack.removeEventListener('click',closeEditFontcolorPanel);
 }
 const closeFontcolorDetailPanel = () => {
-  additionalFontcolorPanel.style = 'display: none;';
+  additionalFontcolorPanel.style = "display: none;";
   additionalFontcolorOpenBtn.style = "display: display;";
   additionalFontcolorCloseBtn.removeEventListener('click',closeFontcolorDetailPanel);
   fontcolorBack.removeEventListener('click',closeFontcolorDetailPanel);
-  fontcolorBack.addEventListener('click',openEditFontPanel);
+  fontcolorBack.addEventListener('click',closeEditFontcolorPanel);
 }
 const openEditFontPanel = () => {
   editFontPanel.style = "display: display;";
