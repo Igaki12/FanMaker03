@@ -51,11 +51,12 @@ const closeFontcolorDetailPanel = () => {
   additionalFontcolorOpenBtn.style = "display: display;";
   additionalFontcolorCloseBtn.removeEventListener('click',closeFontcolorDetailPanel);
   fontcolorBack.removeEventListener('click',closeFontcolorDetailPanel);
-  fontcolorBack.addEventListener('click',backStartPanel);
+  fontcolorBack.addEventListener('click',openEditFontPanel);
 }
 const openEditFontPanel = () => {
   editFontPanel.style = "display: display;";
   startPanel.style = "display: none;";
+  additionalFontcolorPanel.style = "display: none;";
 }
 const openBackgroundPanel = () => {
   editBackgroundPanel.style = "display: display;";
