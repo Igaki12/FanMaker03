@@ -140,6 +140,16 @@ header > p {
   grid-row: 1/2;
   grid-column: 1;
 }
+#nowFontcolorBtn {
+  margin: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  border: 2px solid #777777;
+  background-color: navy;
+  grid-row: 1/2;
+  grid-column: 1;
+}
 .palette:focus {
   outline: none;
   box-shadow: 0 0 0 6px #cbd6ee;
