@@ -131,7 +131,7 @@ fontframeDown.addEventListener('click', () =>{
 })
 fontframeUp.addEventListener('click',() => {
   if(parseInt(fontframeNumber.textContent) > 5) return;
-  fontframeNumber.textContent = parseInt(fontframeNumber.textContent) - 1;
+  fontframeNumber.textContent = parseInt(fontframeNumber.textContent) + 1;
 })
 
 
