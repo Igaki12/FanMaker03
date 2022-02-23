@@ -287,7 +287,6 @@ header > p {
   height: 5px;
   cursor: pointer;
   box-shadow: none;
-  /* background: red; */
   border-radius: 3px;
   border: 0px solid #010101;
 }
@@ -306,6 +305,7 @@ header > p {
 #rs-bullet-fontsize {
   width: 100%;
   margin: 0 auto;
+  text-align: center;
 }
 .rs-range::-moz-range-track {
   width: 100%;
