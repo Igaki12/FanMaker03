@@ -288,7 +288,7 @@ header > p {
   cursor: pointer;
   box-shadow: none;
   /* background: red; */
-  border-radius: 0px;
+  border-radius: 3px;
   border: 0px solid #010101;
 }
 #rs-range-line-red {
