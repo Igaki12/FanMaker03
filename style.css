@@ -123,6 +123,9 @@ header > p {
   margin-top: -5px;
   color: #555555;
 }
+#edit-fontsize-panel {
+  padding-top: 100px;
+}
 .now-color-palette {
   display: grid;
   grid-template-columns: 150px 1fr;
