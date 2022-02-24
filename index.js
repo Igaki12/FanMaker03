@@ -140,11 +140,11 @@ fontframeUp.addEventListener('click',() => {
   var sliderH2 = circleSlider.style.height/2;    
   var radius = 15;
   var deg = 0;    
-  var elP = document.getElementId('circle-range');
+  var elP = document.getElementById('circle-range').offset();
   var elPos = { x: elP.left, y: elP.top};
   var X = 0, Y = 0;
   var mdown = false;
-  document.getElementId('circle-range')
+  document.getElementById('circle-range')
   .mousedown(function (e) { mdown = true; })
   .mouseup(function (e) { mdown = true; })
   .mousemove(function (e) {
@@ -161,7 +161,7 @@ fontframeUp.addEventListener('click',() => {
          circleSlider.css({ '-moz-transform': 'rotate(' + deg + 'deg)'});
          //
          // PRINT DEGREES
-         document.getElementId('circle-slider-range').val(Math.ceil(deg));
+         document.getElementById('circle-slider-range').val(Math.ceil(deg));
       }
   });
 
