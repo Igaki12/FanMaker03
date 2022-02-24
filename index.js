@@ -144,22 +144,30 @@ fontframeUp.addEventListener('click',() => {
   var elPos = { x: elP.left, y: elP.top};
   var X = 0, Y = 0;
   var mdown = false;
-  document.getElementById('circle-range').mousedown(function (e) { mdown = true; });
-  document.getElementById('circle-range').mouseup(function (e) { mdown = true; });
-  document.getElementById('circle-range').mousemove(function (e) {
+  document.getElementById('circle-range').addEventListener('mousedown',() => mdown = true);
+  document.getElementById('circle-range').addEventListener('mouseup',() => mdown = true);
+  document.getElementById('circle-range').addEventListener('mousemove',(e) => {
+  // document.getElementById('circle-range').mousedown(function (e) { mdown = true; });
+  // document.getElementById('circle-range').mouseup(function (e) { mdown = true; });
+  // document.getElementById('circle-range').mousemove(function (e) {
       if (mdown) {
          var mPos = {x: e.clientX-elPos.x, y: e.clientY-elPos.y};
          var atan = Math.atan2(mPos.x-radius, mPos.y-radius);
          deg = -atan/(Math.PI/180) + 180; // final (0-360 positive) degrees from mouse position 
          X = Math.round(radius* Math.sin(deg*Math.PI/180));
          Y = Math.round(radius*  -Math.cos(deg*Math.PI/180));
-         circleSlider.css({ left: X+radius-sliderW2, top: Y+radius-sliderH2 }); 
+        //  circleSlider.css({ left: X+radius-sliderW2, top: Y+radius-sliderH2 }); 
+        circleSlider.style.left = X+radius-sliderW2;
+        circleSlider.style.top = Y+radius-sliderH2;
          // AND FINALLY apply exact degrees to ball rotation
-         circleSlider.css({ WebkitTransform: 'rotate(' + deg + 'deg)'});
-         circleSlider.css({ '-moz-transform': 'rotate(' + deg + 'deg)'});
+         circleSlider.style.WebkitTransform = 'rotate(' + deg + 'deg)';
+         circleSlider.style = "'-moz-transform': 'rotate(' + deg + 'deg)'";
+        //  circleSlider.css({ WebkitTransform: 'rotate(' + deg + 'deg)'});
+        //  circleSlider.css({ '-moz-transform': 'rotate(' + deg + 'deg)'});
          //
          // PRINT DEGREES
-         document.getElementById('circle-slider-range').val(Math.ceil(deg));
+         document.getElementById('circle-slider-range').value = Math.ceil(deg);
+        //  document.getElementById('circle-slider-range').val(Math.ceil(deg));
       }
   });
 
