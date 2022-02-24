@@ -144,10 +144,9 @@ fontframeUp.addEventListener('click',() => {
   var elPos = { x: elP.left, y: elP.top};
   var X = 0, Y = 0;
   var mdown = false;
-  document.getElementById('circle-range')
-  .mousedown(function (e) { mdown = true; })
-  .mouseup(function (e) { mdown = true; })
-  .mousemove(function (e) {
+  document.getElementById('circle-range').mousedown(function (e) { mdown = true; });
+  document.getElementById('circle-range').mouseup(function (e) { mdown = true; });
+  document.getElementById('circle-range').mousemove(function (e) {
       if (mdown) {
          var mPos = {x: e.clientX-elPos.x, y: e.clientY-elPos.y};
          var atan = Math.atan2(mPos.x-radius, mPos.y-radius);
