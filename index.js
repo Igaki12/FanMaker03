@@ -135,16 +135,18 @@ fontframeUp.addEventListener('click',() => {
 // 円形スライダーの挙動
   // var $container = document.getElementById('circle-range');
   var circleSlider = document.getElementById('circle-slider');
-  var sliderW2 = circleSlider.style.width/2;
-  var sliderH2 = circleSlider.style.height/2;    
+  // var sliderW2 = circleSlider.style.width/2;
+  let sliderW2 = 75;
+  let sliderH2 = 75;
+  // var sliderH2 = circleSlider.style.height/2;    
   var radius = 15;
   var deg = 0;    
   var elP = document.getElementById('circle-range');
   var elPos = { x: elP.style.left, y: elP.style.top};
   var X = 0, Y = 0;
   var mdown = false;
-  document.getElementById('circle-range').addEventListener('mousedown',() => mdown = true);
-  document.getElementById('circle-range').addEventListener('mouseup',() => mdown = true);
+  document.getElementById('circle-range').addEventListener('mousedown',(e) => mdown = true);
+  document.getElementById('circle-range').addEventListener('mouseup',(e) => mdown = true);
   document.getElementById('circle-range').addEventListener('mousemove',(e) => {
   // document.getElementById('circle-range').mousedown(function (e) { mdown = true; });
   // document.getElementById('circle-range').mouseup(function (e) { mdown = true; });
