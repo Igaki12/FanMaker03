@@ -135,16 +135,16 @@ fontframeUp.addEventListener('click',() => {
 })
 // 円形スライダーの挙動
   // var $container = document.getElementById('circle-range');
-  var $slider = document.getElementById('circle-slider');
-  var sliderW2 = $slider.width()/2;
-  var sliderH2 = $slider.height()/2;    
+  var circleSlider = document.getElementById('circle-slider');
+  var sliderW2 = circleSlider.width()/2;
+  var sliderH2 = circleSlider.height()/2;    
   var radius = 15;
   var deg = 0;    
-  var elP = $('#circle-range').offset();
+  var elP = document.getElementId('circle-range').offset();
   var elPos = { x: elP.left, y: elP.top};
   var X = 0, Y = 0;
   var mdown = false;
-  $('#circle-range')
+  document.getElementId('circle-range')
   .mousedown(function (e) { mdown = true; })
   .mouseup(function (e) { mdown = true; })
   .mousemove(function (e) {
@@ -155,13 +155,13 @@ fontframeUp.addEventListener('click',() => {
           
          X = Math.round(radius* Math.sin(deg*Math.PI/180));    
          Y = Math.round(radius*  -Math.cos(deg*Math.PI/180));
-         $slider.css({ left: X+radius-sliderW2, top: Y+radius-sliderH2 });              
+         circleSlider.css({ left: X+radius-sliderW2, top: Y+radius-sliderH2 });              
          // AND FINALLY apply exact degrees to ball rotation
-         $slider.css({ WebkitTransform: 'rotate(' + deg + 'deg)'});
-         $slider.css({ '-moz-transform': 'rotate(' + deg + 'deg)'});
+         circleSlider.css({ WebkitTransform: 'rotate(' + deg + 'deg)'});
+         circleSlider.css({ '-moz-transform': 'rotate(' + deg + 'deg)'});
          //
          // PRINT DEGREES
-         $('input[name="angle"]').val(Math.ceil(deg));
+         document.getElementId('circle-slider-range').val(Math.ceil(deg));
       }
   });
 
