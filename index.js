@@ -140,7 +140,7 @@ fontframeUp.addEventListener('click',() => {
   var sliderH2 = circleSlider.style.height/2;    
   var radius = 15;
   var deg = 0;    
-  var elP = document.getElementById('circle-range').offset();
+  var elP = document.getElementById('circle-range');
   var elPos = { x: elP.left, y: elP.top};
   var X = 0, Y = 0;
   var mdown = false;
@@ -152,10 +152,9 @@ fontframeUp.addEventListener('click',() => {
          var mPos = {x: e.clientX-elPos.x, y: e.clientY-elPos.y};
          var atan = Math.atan2(mPos.x-radius, mPos.y-radius);
          deg = -atan/(Math.PI/180) + 180; // final (0-360 positive) degrees from mouse position 
-          
-         X = Math.round(radius* Math.sin(deg*Math.PI/180));    
+         X = Math.round(radius* Math.sin(deg*Math.PI/180));
          Y = Math.round(radius*  -Math.cos(deg*Math.PI/180));
-         circleSlider.css({ left: X+radius-sliderW2, top: Y+radius-sliderH2 });              
+         circleSlider.css({ left: X+radius-sliderW2, top: Y+radius-sliderH2 }); 
          // AND FINALLY apply exact degrees to ball rotation
          circleSlider.css({ WebkitTransform: 'rotate(' + deg + 'deg)'});
          circleSlider.css({ '-moz-transform': 'rotate(' + deg + 'deg)'});
