@@ -26,7 +26,6 @@ const fontcolorBtn = document.getElementById('fontcolor-btn');
 const fontsizeBtn = document.getElementById('fontsize-btn');
 const fontframeBtn = document.getElementById('fontframe-btn');
 
-console.log("あ");
 const backStartPanel = () => {
   startPanel.style = "display: display;";
   editFontPanel.style = "display: none";
@@ -170,5 +169,5 @@ fontframeUp.addEventListener('click',() => {
         //  document.getElementById('circle-slider-range').val(Math.ceil(deg));
       }
   });
-
+  console.log("あ");
 
