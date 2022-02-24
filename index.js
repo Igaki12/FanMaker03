@@ -140,7 +140,7 @@ fontframeUp.addEventListener('click',() => {
   var radius = 15;
   var deg = 0;    
   var elP = document.getElementById('circle-range');
-  var elPos = { x: elP.left, y: elP.top};
+  var elPos = { x: elP.style.left, y: elP.style.top};
   var X = 0, Y = 0;
   var mdown = false;
   document.getElementById('circle-range').addEventListener('mousedown',() => mdown = true);
