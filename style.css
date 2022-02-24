@@ -264,7 +264,7 @@ header > p {
   border-radius: 100%;
   /* float: left; */
   margin-left: 100px;
-  margin-right: auto;
+  margin-top: 10px;
 }
 
 #circle-slider {
@@ -291,13 +291,13 @@ header > p {
   height: 30px;
   padding: 0 6px;
   transition: border 0s ease 0s, width 0.4s ease-in-out 0s;
-  text-align: center;
+  text-align: left;
   font-size: large;
   width: 30px;
   position: absolute;
   margin-top: -105px;
   left: 50%;
-  margin-left: -18px;
+  margin-left: 160px;
 }
 
 .range-slider {
