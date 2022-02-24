@@ -140,7 +140,7 @@ fontframeUp.addEventListener('click',() => {
   var sliderH2 = circleSlider.style.height/2;    
   var radius = 15;
   var deg = 0;    
-  var elP = document.getElementId('circle-range').offset();
+  var elP = document.getElementId('circle-range');
   var elPos = { x: elP.left, y: elP.top};
   var X = 0, Y = 0;
   var mdown = false;
