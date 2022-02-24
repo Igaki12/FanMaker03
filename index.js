@@ -134,7 +134,6 @@ fontframeUp.addEventListener('click',() => {
   fontframeNumber.textContent = parseInt(fontframeNumber.textContent) + 1;
 })
 // 円形スライダーの挙動
-(function () {
   // var $container = document.getElementById('circle-range');
   var $slider = document.getElementById('circle-slider');
   var sliderW2 = $slider.width()/2;
@@ -165,6 +164,5 @@ fontframeUp.addEventListener('click',() => {
          $('input[name="angle"]').val(Math.ceil(deg));
       }
   });
-})();
 
 
