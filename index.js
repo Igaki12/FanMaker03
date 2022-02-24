@@ -136,8 +136,8 @@ fontframeUp.addEventListener('click',() => {
 // 円形スライダーの挙動
   // var $container = document.getElementById('circle-range');
   var circleSlider = document.getElementById('circle-slider');
-  var sliderW2 = circleSlider.width()/2;
-  var sliderH2 = circleSlider.height()/2;    
+  var sliderW2 = circleSlider.style.width/2;
+  var sliderH2 = circleSlider.style.height/2;    
   var radius = 15;
   var deg = 0;    
   var elP = document.getElementId('circle-range').offset();
