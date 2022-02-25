@@ -142,9 +142,10 @@ fontframeUp.addEventListener('click',() => {
   var radius = 75;
   var deg = 0;    
   var elP = document.getElementById('circle-range');
-  var elPos = { x: 100, y: window.innerHeight - 80};
+  var elPos = { x: 100, y: window.innerHeight - 155};
   var X = 0, Y = 0;
   var mdown = false;
+  console.log(circleSlider.style.left);
   document.getElementById('circle-range').addEventListener('mousedown',(e) => mdown = true);
   document.getElementById('circle-range').addEventListener('mouseup',(e) => mdown = true);
   document.getElementById('circle-range').addEventListener('mousemove',(e) => {
