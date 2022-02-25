@@ -133,12 +133,7 @@ fontframeUp.addEventListener('click',() => {
   fontframeNumber.textContent = parseInt(fontframeNumber.textContent) + 1;
 })
 // 円形スライダーの挙動
-  // var $container = document.getElementById('circle-range');
   var circleSlider = document.getElementById('circle-slider');
-  // var sliderW2 = circleSlider.style.width/2;
-  let sliderW2 = 75;
-  let sliderH2 = 75;
-  // var sliderH2 = circleSlider.style.height/2;    
   var radius = 75;
   var deg = 0;    
   var elP = document.getElementById('circle-range');
@@ -160,17 +155,13 @@ fontframeUp.addEventListener('click',() => {
          Y = Math.round(radius*  -Math.cos(deg*Math.PI/180));
          circleSlider.style.left = X+radius + "px";
          circleSlider.style.top = Y+radius - 12 + "px";
-        //  circleSlider.css({ left: X+radius-sliderW2, top: Y+radius-sliderH2 }); 
-        // circleSlider.style += "top:" + Y+radius-sliderH2;
-         // AND FINALLY apply exact degrees to ball rotation
-        //  circleSlider.style += 'WebkitTransform: rotate(' + deg + 'deg)';
-        //  circleSlider.style += "-moz-transform: rotate(" + deg + "deg)";
-        //  circleSlider.css({ WebkitTransform: 'rotate(' + deg + 'deg)'});
-        //  circleSlider.css({ '-moz-transform': 'rotate(' + deg + 'deg)'});
          //
          // PRINT DEGREES
-         document.getElementById('circle-slider-range').value = Math.ceil(deg);
-        //  document.getElementById('circle-slider-range').val(Math.ceil(deg));
+         if(deg < 360){
+          document.getElementById('circle-slider-range').value = Math.ceil(deg);
+         }else{
+          document.getElementById('circle-slider-range').value = 0;
+         }
       }
   });
   console.log("あ");
