@@ -160,11 +160,7 @@ fontframeUp.addEventListener('click',() => {
          Y = Math.round(radius*  -Math.cos(deg*Math.PI/180));
          circleSlider.style.left = X+radius-sliderW2 + "px;";
          circleSlider.style.top = Y+radius-sliderH2 + "px;";
-        //  getComputedStyle(circleSlider).webkitTransform = "rotate(" + deg + "deg)";
-        //  getComputedStyle(circleSlider)
         //  circleSlider.css({ left: X+radius-sliderW2, top: Y+radius-sliderH2 }); 
-        // circleSlider.style.left = X+radius-sliderW2;
-        // circleSlider.style.top = Y+radius-sliderH2;
         // circleSlider.style += "top:" + Y+radius-sliderH2;
          // AND FINALLY apply exact degrees to ball rotation
         //  circleSlider.style += 'WebkitTransform: rotate(' + deg + 'deg)';
