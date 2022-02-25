@@ -153,7 +153,7 @@ fontframeUp.addEventListener('click',() => {
   // document.getElementById('circle-range').mouseup(function (e) { mdown = true; });
   // document.getElementById('circle-range').mousemove(function (e) {
       if (mdown) {
-         var mPos = {x: e.clientX-elPos.x, y: e.clientY-elPos.y};
+         var mPos = {x: e.changedTouches[0].pageX-elPos.x, y: e.changedTouches[0].pageY-elPos.y};
          var atan = Math.atan2(mPos.x-radius, mPos.y-radius);
          deg = -atan/(Math.PI/180) + 180; // final (0-360 positive) degrees from mouse position 
          X = Math.round(radius* Math.sin(deg*Math.PI/180));
