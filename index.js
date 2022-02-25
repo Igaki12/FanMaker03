@@ -174,6 +174,7 @@ fontframeUp.addEventListener('click',() => {
         //  document.getElementById('circle-slider-range').val(Math.ceil(deg));
       }
   });
+  let test = document.getElementById("circle-slider");
   console.log(getComputedStyle(test).left); 
   console.log("あ");
 
