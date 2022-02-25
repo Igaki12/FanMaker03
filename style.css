@@ -268,7 +268,7 @@ header > p {
 }
 
 #circle-slider {
-  position: absolute;
+  position: relative;
   height: 24px;
   width: 24px;
   background: white;
