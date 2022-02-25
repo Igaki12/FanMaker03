@@ -275,7 +275,7 @@ header > p {
   border: 1px solid grey;
   /* left: 75px; */
   margin-left: -10px;
-  top: -14px;
+  /* top: -14px; */
   border-radius: 100%;
   cursor: pointer;
 }
