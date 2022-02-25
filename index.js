@@ -147,7 +147,7 @@ fontframeUp.addEventListener('click',() => {
   var mdown = false;
   console.log(circleSlider.style.left);
   document.getElementById('circle-range').addEventListener('mousedown',(e) => mdown = true);
-  document.getElementById('circle-range').addEventListener('mouseup',(e) => mdown = true);
+  document.getElementById('circle-range').addEventListener('mouseup',(e) => mdown = false);
   document.getElementById('circle-range').addEventListener('mousemove',(e) => {
   // document.getElementById('circle-range').mousedown(function (e) { mdown = true; });
   // document.getElementById('circle-range').mouseup(function (e) { mdown = true; });
@@ -158,8 +158,8 @@ fontframeUp.addEventListener('click',() => {
          deg = -atan/(Math.PI/180) + 180; // final (0-360 positive) degrees from mouse position 
          X = Math.round(radius* Math.sin(deg*Math.PI/180));
          Y = Math.round(radius*  -Math.cos(deg*Math.PI/180));
-         circleSlider.style.left = X+radius-sliderW2 + "px;";
-         circleSlider.style.top = Y+radius-sliderH2 + "px;";
+         circleSlider.style.left = X+radius-sliderW2 + "px";
+         circleSlider.style.top = Y+radius-sliderH2 + "px";
         //  circleSlider.css({ left: X+radius-sliderW2, top: Y+radius-sliderH2 }); 
         // circleSlider.style += "top:" + Y+radius-sliderH2;
          // AND FINALLY apply exact degrees to ball rotation
@@ -173,7 +173,6 @@ fontframeUp.addEventListener('click',() => {
         //  document.getElementById('circle-slider-range').val(Math.ceil(deg));
       }
   });
-  let test = document.getElementById("circle-slider");
   console.log("あ");
 
 
