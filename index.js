@@ -160,11 +160,11 @@ fontframeUp.addEventListener('click',() => {
         //  circleSlider.css({ left: X+radius-sliderW2, top: Y+radius-sliderH2 }); 
         // circleSlider.style.left = X+radius-sliderW2;
         // circleSlider.style.top = Y+radius-sliderH2;
-        circleSlider.style = "left:" + X+radius-sliderW2;
-        circleSlider.style += "top:" + Y+radius-sliderH2;
+        circleSlider.style = "left:" + X+radius-sliderW2 + "; top:" + Y+radius-sliderH2 + '; WebkitTransform: rotate(' + deg + 'deg);' + "-moz-transform: rotate(" + deg + "deg);";
+        // circleSlider.style += "top:" + Y+radius-sliderH2;
          // AND FINALLY apply exact degrees to ball rotation
-         circleSlider.style += 'WebkitTransform: rotate(' + deg + 'deg)';
-         circleSlider.style += "-moz-transform: rotate(" + deg + "deg)";
+        //  circleSlider.style += 'WebkitTransform: rotate(' + deg + 'deg)';
+        //  circleSlider.style += "-moz-transform: rotate(" + deg + "deg)";
         //  circleSlider.css({ WebkitTransform: 'rotate(' + deg + 'deg)'});
         //  circleSlider.css({ '-moz-transform': 'rotate(' + deg + 'deg)'});
          //
