@@ -158,8 +158,8 @@ fontframeUp.addEventListener('click',() => {
          deg = -atan/(Math.PI/180) + 180; // final (0-360 positive) degrees from mouse position 
          X = Math.round(radius* Math.sin(deg*Math.PI/180));
          Y = Math.round(radius*  -Math.cos(deg*Math.PI/180));
-         circleSlider.style.left = X+radius-sliderW2 + "px";
-         circleSlider.style.top = Y+radius-sliderH2 + "px";
+         circleSlider.style.left = X+radius + "px";
+         circleSlider.style.top = Y+radius + "px";
         //  circleSlider.css({ left: X+radius-sliderW2, top: Y+radius-sliderH2 }); 
         // circleSlider.style += "top:" + Y+radius-sliderH2;
          // AND FINALLY apply exact degrees to ball rotation
