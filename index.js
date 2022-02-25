@@ -163,8 +163,8 @@ fontframeUp.addEventListener('click',() => {
         circleSlider.style = "left:" + X+radius-sliderW2;
         circleSlider.style += "top:" + Y+radius-sliderH2;
          // AND FINALLY apply exact degrees to ball rotation
-         circleSlider.style.WebkitTransform = 'rotate(' + deg + 'deg)';
-         circleSlider.style = "'-moz-transform': 'rotate(' + deg + 'deg)'";
+         circleSlider.style += 'WebkitTransform: rotate(' + deg + 'deg)';
+         circleSlider.style += "-moz-transform: rotate(" + deg + "deg)";
         //  circleSlider.css({ WebkitTransform: 'rotate(' + deg + 'deg)'});
         //  circleSlider.css({ '-moz-transform': 'rotate(' + deg + 'deg)'});
          //
