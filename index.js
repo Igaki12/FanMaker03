@@ -146,9 +146,9 @@ fontframeUp.addEventListener('click',() => {
   var X = 0, Y = 0;
   var mdown = false;
   console.log(circleSlider.style.left);
-  document.getElementById('circle-range').addEventListener('mousedown',(e) => mdown = true);
-  document.getElementById('circle-range').addEventListener('mouseup',(e) => mdown = false);
-  document.getElementById('circle-range').addEventListener('mousemove',(e) => {
+  document.getElementById('circle-range').addEventListener('touchstart',(e) => mdown = true);
+  document.getElementById('circle-range').addEventListener('touchend',(e) => mdown = false);
+  document.getElementById('circle-range').addEventListener('touchmove',(e) => {
   // document.getElementById('circle-range').mousedown(function (e) { mdown = true; });
   // document.getElementById('circle-range').mouseup(function (e) { mdown = true; });
   // document.getElementById('circle-range').mousemove(function (e) {
