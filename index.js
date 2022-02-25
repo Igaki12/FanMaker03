@@ -167,6 +167,7 @@ fontframeUp.addEventListener('click',() => {
   console.log("あ");
 
 document.getElementById('rs-range-line-red').addEventListener('input',() => {
+  console.log('range-slider moved');
   document.getElementById('rs-bullet-red').innerHTML = document.getElementById('rs-range-line-red').value;
 })
 
