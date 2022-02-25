@@ -295,9 +295,8 @@ header > p {
   font-size: large;
   width: 30px;
   position: absolute;
-  margin-top: -105px;
-  left: 50%;
-  margin-left: -60px;
+  bottom: 155px;
+  left: 100px;
 }
 
 .range-slider {
