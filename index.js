@@ -71,9 +71,18 @@ function addExistBackgroundColorBtn(newColorText) {
     child = document.getElementById('exist-background-parent').appendChild(child);
     console.log(child);
   });
-
 }
-
+const reloadBackgroundDetailColorRange = (colorText) => {
+  const redValue = colorText.split("(")[1].split(",")[0];
+  const greenValue = colorText.split(",")[1].split(",")[0];
+  const blueValue = colorText.split(",")[2].split(")")[0];
+  document.getElementById('rs-bullet-red').innerHTML = redValue;
+  document.getElementById('rs-bullet-green').innerHTML = greenValue;
+  document.getElementById('rs-bullet-blue').innerHTML = blueValue;
+  document.getElementById('rs-range-line-red').value = redValue;
+  document.getElementById('rs-range-line-green').value = greenValue;
+  document.getElementById('rs-range-line-blue').value = blueValue;
+};
 const backStartPanel = () => {
   startPanel.style = "display: display;";
   editFontPanel.style = "display: none";
@@ -83,12 +92,7 @@ const openBackgroundDetailPanel = () => {
   additionalBackgroundPanel.style = "display: display;";
   additionalBackgroundOpenBtn.style = "display: none;";
   editBackgroundBack.removeEventListener('click',backStartPanel);
-  document.getElementById('rs-bullet-red').innerHTML
-  = document.getElementById('backgroundImg').style.backgroundColor.split("(")[1].split(",")[0];
-  document.getElementById('rs-bullet-green').innerHTML
-  = document.getElementById('backgroundImg').style.backgroundColor.split(",")[1];
-  document.getElementById('rs-bullet-blue').innerHTML
-  = document.getElementById('backgroundImg').style.backgroundColor.split(",")[2].split(")")[0];
+  reloadBackgroundDetailColorRange("red",)
 }
 const closeBackgroundDetailPanel = () => {
   additionalBackgroundPanel.style = 'display: none;';
@@ -262,7 +266,11 @@ document.getElementById('rs-range-line-blue').addEventListener('input',() => {
 });
 
 document.getElementById('background-red-plus').addEventListener('click',() => {
-  document.getElementById('rs-bullet-red').innerHTML = parseInt(document.getElementById('rs-bullet-red').innerHTML) + 1;
+  if(parseInt(document.getElementById('rs-bullet-red').innerHTML) >= 255) return;
+  if(parseInt(document.getElementById('rs-bullet-red').innerHTML) <= 0) return;
+  let newBackgroundColorText = `rgb(${parseInt(document.getElementById('rs-bullet-red').innerHTML)+1},${document.getElementById('rs-bullet-green').innerHTML},${document.getElementById('rs-bullet-blue').innerHTML})`;
+  console.log(newBackgroundColorText);
+  reloadBackgroundDetailColorRange(newBackgroundColorText);
   changeAdditionalBackgroundColor();
 });
 document.getElementById('background-green-plus').addEventListener('click',() => {
