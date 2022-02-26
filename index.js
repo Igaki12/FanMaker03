@@ -167,8 +167,13 @@ fontframeUp.addEventListener('click',() => {
   console.log("あ");
 
 document.getElementById('rs-range-line-red').addEventListener('input',() => {
-  console.log('range-slider moved');
   document.getElementById('rs-bullet-red').innerHTML = document.getElementById('rs-range-line-red').value;
-})
+});
+document.getElementById('rs-range-line-green').addEventListener('input',() => {
+  document.getElementById('rs-bullet-green').innerHTML = document.getElementById('rs-range-line-green').value;
+});
+document.getElementById('rs-range-line-blue').addEventListener('input',() => {
+  document.getElementById('rs-bullet-blue').innerHTML = document.getElementById('rs-range-line-blue').value;
+});
 
 
