@@ -53,7 +53,7 @@ function addBasicBackgroundColorBtn(){
 }
 function addExistBackgroundColorBtn(newColorText) {
   console.log(existColorList.indexOf(newColorText));
-  if(existColorList.indexOf(newColorText) === -1){
+  if(newColorText !== "" && existColorList.indexOf(newColorText) === -1){
     existColorList.unshift(newColorText);
   }
   let parent = document.getElementById('exist-background-parent');
