@@ -82,7 +82,7 @@ const reloadBackgroundDetailColorRange = (colorText) => {
   document.getElementById('rs-range-line-red').value = redValue;
   document.getElementById('rs-range-line-green').value = greenValue;
   document.getElementById('rs-range-line-blue').value = blueValue;
-  console.log(blueValue);
+  console.log(`${colorText} = rgb(${redValue},${greenValue},${blueValue})`);
 };
 const backStartPanel = () => {
   startPanel.style = "display: display;";
