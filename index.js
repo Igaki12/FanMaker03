@@ -49,6 +49,7 @@ function addBasicBackgroundColorBtn(){
     console.log(child);
   })
 }
+// Detail表示時に色パレットをタップすることでその色のＲＧＢを表示するように修正予定
 function addExistBackgroundColorBtn(newColorText) {
   console.log(existColorList.indexOf(newColorText));
   if(existColorList.indexOf(newColorText) === -1){
