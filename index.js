@@ -72,6 +72,18 @@ function addExistBackgroundColorBtn(newColorText) {
     console.log(child);
   });
 }
+const changeAdditionalBackgroundColor = () => {
+  console.log('changeAdditionalBackgroundColor');
+  document.getElementById('additional-background-close-btn').style
+  = "background-color:rgb(" + document.getElementById('rs-bullet-red').innerHTML
+  + "," + document.getElementById('rs-bullet-green').innerHTML
+  + "," + document.getElementById('rs-bullet-blue').innerHTML + ");";
+
+  document.getElementById('nowBackgroundColorBtn').style
+  = "background-color:rgb(" + document.getElementById('rs-bullet-red').innerHTML
+  + "," + document.getElementById('rs-bullet-green').innerHTML
+  + "," + document.getElementById('rs-bullet-blue').innerHTML + ");";
+};
 const reloadBackgroundDetailColorRange = (colorText) => {
   const redValue = colorText.split("(")[1].split(",")[0];
   const greenValue = colorText.split(",")[1].split(",")[0];
@@ -94,6 +106,7 @@ const openBackgroundDetailPanel = () => {
   additionalBackgroundOpenBtn.style = "display: none;";
   editBackgroundBack.removeEventListener('click',backStartPanel);
   reloadBackgroundDetailColorRange(document.getElementById('backgroundImg').style.backgroundColor);
+  changeAdditionalBackgroundColor();
 }
 const closeBackgroundDetailPanel = () => {
   additionalBackgroundPanel.style = 'display: none;';
@@ -240,18 +253,7 @@ document.getElementById('nowBackgroundColorBtn').addEventListener('click', () =>
       }
   });
   console.log("あ");
-const changeAdditionalBackgroundColor = () => {
-  console.log('changeAdditionalBackgroundColor');
-  document.getElementById('additional-background-close-btn').style
-  = "background-color:rgb(" + document.getElementById('rs-bullet-red').innerHTML
-  + "," + document.getElementById('rs-bullet-green').innerHTML
-  + "," + document.getElementById('rs-bullet-blue').innerHTML + ");";
 
-  document.getElementById('nowBackgroundColorBtn').style
-  = "background-color:rgb(" + document.getElementById('rs-bullet-red').innerHTML
-  + "," + document.getElementById('rs-bullet-green').innerHTML
-  + "," + document.getElementById('rs-bullet-blue').innerHTML + ");";
-}
 // スライドバー関連のコード
 document.getElementById('rs-range-line-red').addEventListener('input',() => {
   document.getElementById('rs-bullet-red').innerHTML = document.getElementById('rs-range-line-red').value;
