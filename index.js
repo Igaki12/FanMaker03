@@ -31,6 +31,26 @@ const fontframeBtn = document.getElementById('fontframe-btn');
 let existColorList= [
   "bisque",
 ];
+let basicColorList = [
+  "#ff9500","#f62e36","#b5b5ac","#009bbf","#00bb85","#c1a470","#8f76d6","#00ac9b","#9c5e31","#e85298","#e5171f","#522886","#0078ba","#00a0de","#a9cc51","#814721",
+];
+function addBasicBackgroundColorBtn(){
+  let parent = document.getElementById('basic-background-parent');
+  while(parent.firstChild){
+    parent.removeChild(parent.firstChild);
+  };
+  basicColorList.map((value,index)=> {
+    let child = document.createElement('button');
+    child.id = `background-basic-color${index}`;
+    child.style.backgroundColor = value;
+    child.className = "colorBtn palette";
+    child.addEventListener('click',() => {
+      document.getElementById('backgroundImg').style = `background-color: ${value};`
+    });
+    child = document.getElementById('basic-background-parent').appendChild(child);
+    console.log(child);
+  })
+}
 function addExistBackgroundColorBtn(newColorText) {
   existColorList.unshift(newColorText);
   console.log(existColorList);
