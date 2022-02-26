@@ -52,7 +52,7 @@ function addBasicBackgroundColorBtn(){
   })
 }
 function addExistBackgroundColorBtn(newColorText) {
-  if(newColorText){
+  if(existColorList.indexOf(newColorText) !== -1){
     existColorList.unshift(newColorText);
     console.log(existColorList);
   }
