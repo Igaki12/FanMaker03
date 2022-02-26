@@ -38,6 +38,7 @@ function addExistBackgroundColorBtn(newColorText) {
     let child = document.createElement("button");
     child.id = index;
     child.style.backgroundColor = value;
+    child.className = "colorBtn palette";
     child = document.getElementById('exist-background-parent').appendChild(child);
     console.log(child);
   });
