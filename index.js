@@ -83,7 +83,9 @@ const openBackgroundDetailPanel = () => {
   additionalBackgroundPanel.style = "display: display;";
   additionalBackgroundOpenBtn.style = "display: none;";
   editBackgroundBack.removeEventListener('click',backStartPanel);
-  document.getElementById('')
+  console.log(document.getElementById('backgroundImg').style);
+  document.getElementById('nowBackgroundColorBtn').style 
+  = document.getElementById('backgroundImg').style;
 }
 const closeBackgroundDetailPanel = () => {
   additionalBackgroundPanel.style = 'display: none;';
