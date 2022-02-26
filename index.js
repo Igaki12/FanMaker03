@@ -1,5 +1,3 @@
-
-
 const additionalBackgroundOpenBtn = document.getElementById('additional-background-open-btn');
 const additionalBackgroundCloseBtn = document.getElementById('additional-background-close-btn');
 const additionalBackgroundRow = document.getElementById('additional-background-row');
@@ -93,9 +91,9 @@ const reloadBackgroundDetailColorRange = (colorText) => {
   document.getElementById('rs-bullet-red').innerHTML = redValue;
   document.getElementById('rs-bullet-green').innerHTML = greenValue;
   document.getElementById('rs-bullet-blue').innerHTML = blueValue;
-  document.getElementById('rs-range-line-red').value = redValue;
-  document.getElementById('rs-range-line-green').value = greenValue;
-  document.getElementById('rs-range-line-blue').value = blueValue;
+  document.getElementById('rs-range-line-red').ariaValueNow = redValue;
+  document.getElementById('rs-range-line-green').ariaValueNow = greenValue;
+  document.getElementById('rs-range-line-blue').ariaValueNow = blueValue;
   console.log(`${colorText} = rgb(${redValue},${greenValue},${blueValue})`);
 };
 const backStartPanel = () => {
