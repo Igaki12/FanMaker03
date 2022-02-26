@@ -1,3 +1,5 @@
+
+
 const additionalBackgroundOpenBtn = document.getElementById('additional-background-open-btn');
 const additionalBackgroundCloseBtn = document.getElementById('additional-background-close-btn');
 const additionalBackgroundRow = document.getElementById('additional-background-row');
@@ -26,6 +28,22 @@ const fontcolorBtn = document.getElementById('fontcolor-btn');
 const fontsizeBtn = document.getElementById('fontsize-btn');
 const fontframeBtn = document.getElementById('fontframe-btn');
 
+let existColorList= [
+  "rgb(0,0,0)",
+];
+function addExistBackgroundColorBtn(newColorText) {
+  existColorList.unshift(newColorText);
+  console.log(existColorList);
+  existColorList.map((value, index) => {
+    let child = document.createElement("button");
+    child.id = index;
+    child.style.backgroundColor = value;
+    child = document.getElementById('exist-background-parent').appendChild(child);
+    console.log(child);
+  });
+
+}
+
 const backStartPanel = () => {
   startPanel.style = "display: display;";
   editFontPanel.style = "display: none";
@@ -42,6 +60,12 @@ const closeBackgroundDetailPanel = () => {
   additionalBackgroundCloseBtn.removeEventListener('click',closeBackgroundDetailPanel);
   editBackgroundBack.removeEventListener('click',closeBackgroundDetailPanel);
   editBackgroundBack.addEventListener('click',backStartPanel);
+  let selectedColor = "rgb(" 
+  + document.getElementById('rs-bullet-red').innerHTML +  "," 
+  + document.getElementById('rs-bullet-green').innerHTML + "," 
+  + document.getElementById('rs-bullet-blue').innerHTML + ")";
+  console.log(selectedColor);
+  addExistBackgroundColorBtn(selectedColor);
 }
 const openFontcolorDetailPanel = () => {
   additionalFontcolorPanel.style = "display: display;";
@@ -166,7 +190,7 @@ fontframeUp.addEventListener('click',() => {
   });
   console.log("あ");
 const changeAdditionalBackgroundColor = () => {
-  console.log('changeAdditionalBackgroundCOlor');
+  console.log('changeAdditionalBackgroundColor');
   document.getElementById('additional-background-close-btn').style
   = "background-color:rgb(" + document.getElementById('rs-bullet-red').innerHTML
   + "," + document.getElementById('rs-bullet-green').innerHTML
