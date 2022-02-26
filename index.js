@@ -52,8 +52,10 @@ function addBasicBackgroundColorBtn(){
   })
 }
 function addExistBackgroundColorBtn(newColorText) {
-  existColorList.unshift(newColorText);
-  console.log(existColorList);
+  if(newColorText){
+    existColorList.unshift(newColorText);
+    console.log(existColorList);
+  }
   let parent = document.getElementById('exist-background-parent');
   while(parent.firstChild){
     parent.removeChild(parent.firstChild);
@@ -117,6 +119,7 @@ const openEditFontPanel = () => {
 const openBackgroundPanel = () => {
   editBackgroundPanel.style = "display: display;";
   startPanel.style = "display: none;";
+  addExistBackgroundColorBtn();
   addBasicBackgroundColorBtn();
 }
 const openEditAnglePanel = () => {
