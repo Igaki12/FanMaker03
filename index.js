@@ -290,15 +290,15 @@ document.getElementById('background-blue-plus').addEventListener('click',() => {
   changeAdditionalBackgroundColor();
 });
 document.getElementById('background-red-minus').addEventListener('click',() => {
-  if(parseInt(document.getElementById('rs-bullet-blue').innerHTML) >= 255) return;
-  if(parseInt(document.getElementById('rs-bullet-blue').innerHTML) <= 0) return;
+  if(parseInt(document.getElementById('rs-bullet-red').innerHTML) >= 255) return;
+  if(parseInt(document.getElementById('rs-bullet-red').innerHTML) <= 0) return;
   let newBackgroundColorText = `rgb(${parseInt(document.getElementById('rs-bullet-red').innerHTML) -1},${parseInt(document.getElementById('rs-bullet-green').innerHTML)},${parseInt(document.getElementById('rs-bullet-blue').innerHTML)})`;
   reloadBackgroundDetailColorRange(newBackgroundColorText);
   changeAdditionalBackgroundColor();
 });
 document.getElementById('background-green-minus').addEventListener('click',() => {
-  if(parseInt(document.getElementById('rs-bullet-blue').innerHTML) >= 255) return;
-  if(parseInt(document.getElementById('rs-bullet-blue').innerHTML) <= 0) return;
+  if(parseInt(document.getElementById('rs-bullet-green').innerHTML) >= 255) return;
+  if(parseInt(document.getElementById('rs-bullet-green').innerHTML) <= 0) return;
   let newBackgroundColorText = `rgb(${parseInt(document.getElementById('rs-bullet-red').innerHTML)},${parseInt(document.getElementById('rs-bullet-green').innerHTML) -1},${parseInt(document.getElementById('rs-bullet-blue').innerHTML)})`;
   reloadBackgroundDetailColorRange(newBackgroundColorText);
   changeAdditionalBackgroundColor();
