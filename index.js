@@ -31,7 +31,7 @@ const fontframeBtn = document.getElementById('fontframe-btn');
 let existColorList= [
   "rgb(255,228,196)",
 ];
-let basicColorList = [
+const BasicColorList = [
   "rgb(255,0,0)","rgb(255,63,0)","rgb(255,127,0)","rgb(255,191,0)","rgb(255,255,0)","rgb(191,255,0)","rgb(127,255,0)","rgb(63,255,0)","rgb(0,255,0)","rgb(0,255,63)","rgb(0,255,127)","rgb(0,255,191)","rgb(0,255,255)","rgb(0,191,255)","rgb(0,127,255)","rgb(0,63,255)","rgb(0,0,255)","rgb(63,0,255)","rgb(127,0,255)","rgb(191,0,255)","rgb(255,0,255)","rgb(255,0,191)","rgb(255,0,127)","rgb(255,0,63)","rgb(127,127,127)","rgb(63,63,63)","rgb(0,0,0)",
 ];
 function addBasicBackgroundColorBtn(){
@@ -39,7 +39,7 @@ function addBasicBackgroundColorBtn(){
   while(parent.firstChild){
     parent.removeChild(parent.firstChild);
   };
-  basicColorList.map((value,index)=> {
+  BasicColorList.map((value,index)=> {
     let child = document.createElement('button');
     child.id = `background-basic-color${index}`;
     child.style.backgroundColor = value;
