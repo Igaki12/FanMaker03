@@ -29,7 +29,7 @@ const fontsizeBtn = document.getElementById('fontsize-btn');
 const fontframeBtn = document.getElementById('fontframe-btn');
 
 let existColorList= [
-  "rgb(0,0,0)",
+  "bisque",
 ];
 function addExistBackgroundColorBtn(newColorText) {
   existColorList.unshift(newColorText);
@@ -40,9 +40,12 @@ function addExistBackgroundColorBtn(newColorText) {
   };
   existColorList.map((value, index) => {
     let child = document.createElement("button");
-    child.id = index;
+    child.id = `background-exist-color${index}`;
     child.style.backgroundColor = value;
     child.className = "colorBtn palette";
+    child.addEventListener('click',() => {
+      document.getElementById('backgroundImg').style = `background-color: ${value};`
+    });
     child = document.getElementById('exist-background-parent').appendChild(child);
     console.log(child);
   });
