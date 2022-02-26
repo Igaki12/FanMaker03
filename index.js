@@ -88,12 +88,12 @@ const reloadBackgroundDetailColorRange = (colorText) => {
   const redValue = colorText.split("(")[1].split(",")[0];
   const greenValue = colorText.split(",")[1].split(",")[0];
   const blueValue = colorText.split(",")[2].split(")")[0];
-  document.getElementById('rs-bullet-red').innerHTML = redValue;
-  document.getElementById('rs-bullet-green').innerHTML = greenValue;
-  document.getElementById('rs-bullet-blue').innerHTML = blueValue;
   document.getElementById('rs-range-line-red').value = redValue;
   document.getElementById('rs-range-line-green').value = greenValue;
   document.getElementById('rs-range-line-blue').value = blueValue;
+  document.getElementById('rs-bullet-red').innerHTML = redValue;
+  document.getElementById('rs-bullet-green').innerHTML = greenValue;
+  document.getElementById('rs-bullet-blue').innerHTML = blueValue;
   console.log(`${colorText} = rgb(${redValue},${greenValue},${blueValue}) redValue=${document.getElementById('rs-range-line-red').value},greenValue=${document.getElementById('rs-range-line-green').value},blueValue=${document.getElementById('rs-range-line-blue').value}`);
 };
 const backStartPanel = () => {
