@@ -29,10 +29,10 @@ const fontsizeBtn = document.getElementById('fontsize-btn');
 const fontframeBtn = document.getElementById('fontframe-btn');
 
 let existColorList= [
-  "bisque",
+  "rgb(255,228,196)",
 ];
 let basicColorList = [
-  "#ff9500","#f62e36","#b5b5ac","#009bbf","#00bb85","#c1a470","#8f76d6","#00ac9b","#9c5e31","#e85298","#e5171f","#522886","#0078ba","#00a0de","#a9cc51","#814721",
+  "rgb(255,0,0)","rgb(255,63,0)","rgb(255,127,0)","rgb(255,191,0)","rgb(255,255,0)","rgb(191,255,0)","rgb(127,255,0)","rgb(63,255,0)","rgb(0,255,0)","rgb(0,255,63)","rgb(0,255,127)","rgb(0,255,191)","rgb(0,255,255)","rgb(0,191,255)","rgb(0,127,255)","rgb(0,63,255)","rgb(0,0,255)","rgb(63,0,255)","rgb(127,0,255)","rgb(191,0,255)","rgb(255,0,255)","rgb(255,0,191)","rgb(255,0,127)","rgb(255,0,63)","rgb(127,127,127)","rgb(63,63,63)","rgb(0,0,0)",
 ];
 function addBasicBackgroundColorBtn(){
   let parent = document.getElementById('basic-background-parent');
@@ -81,6 +81,7 @@ const openBackgroundDetailPanel = () => {
   additionalBackgroundPanel.style = "display: display;";
   additionalBackgroundOpenBtn.style = "display: none;";
   editBackgroundBack.removeEventListener('click',backStartPanel);
+  document.getElementById('')
 }
 const closeBackgroundDetailPanel = () => {
   additionalBackgroundPanel.style = 'display: none;';
@@ -94,6 +95,7 @@ const closeBackgroundDetailPanel = () => {
   + document.getElementById('rs-bullet-blue').innerHTML + ")";
   console.log(selectedColor);
   addExistBackgroundColorBtn(selectedColor);
+  document.getElementById('backgroundImg').style = `background-color: ${selectedColor}`;
 }
 const openFontcolorDetailPanel = () => {
   additionalFontcolorPanel.style = "display: display;";
@@ -225,7 +227,7 @@ const changeAdditionalBackgroundColor = () => {
   + "," + document.getElementById('rs-bullet-green').innerHTML
   + "," + document.getElementById('rs-bullet-blue').innerHTML + ");";
 
-  document.getElementById('backgroundImg').style
+  document.getElementById('nowBackgroundColorBtn').style
   = "background-color:rgb(" + document.getElementById('rs-bullet-red').innerHTML
   + "," + document.getElementById('rs-bullet-green').innerHTML
   + "," + document.getElementById('rs-bullet-blue').innerHTML + ");";
