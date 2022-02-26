@@ -115,6 +115,7 @@ const openEditFontPanel = () => {
 const openBackgroundPanel = () => {
   editBackgroundPanel.style = "display: display;";
   startPanel.style = "display: none;";
+  addBasicBackgroundColorBtn();
 }
 const openEditAnglePanel = () => {
   editAnglePanel.style = "display: display";
