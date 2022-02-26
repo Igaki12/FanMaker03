@@ -83,6 +83,12 @@ const openBackgroundDetailPanel = () => {
   additionalBackgroundPanel.style = "display: display;";
   additionalBackgroundOpenBtn.style = "display: none;";
   editBackgroundBack.removeEventListener('click',backStartPanel);
+  document.getElementById('rs-bullet-red').innerHTML
+  = document.getElementById('backgroundImg').style.backgroundColor.split("(")[1].split(",")[0];
+  document.getElementById('rs-bullet-green').innerHTML
+  = document.getElementById('backgroundImg').style.backgroundColor.split(",")[1];
+  document.getElementById('rs-bullet-blue').innerHTML
+  = document.getElementById('backgroundImg').style.backgroundColor.split(",")[2].split(")")[0];
 }
 const closeBackgroundDetailPanel = () => {
   additionalBackgroundPanel.style = 'display: none;';
@@ -241,7 +247,7 @@ const changeAdditionalBackgroundColor = () => {
   + "," + document.getElementById('rs-bullet-green').innerHTML
   + "," + document.getElementById('rs-bullet-blue').innerHTML + ");";
 }
-
+// スライドバー関連のコード
 document.getElementById('rs-range-line-red').addEventListener('input',() => {
   document.getElementById('rs-bullet-red').innerHTML = document.getElementById('rs-range-line-red').value;
   changeAdditionalBackgroundColor();
@@ -278,6 +284,6 @@ document.getElementById('background-green-minus').addEventListener('click',() =>
 document.getElementById('background-blue-minus').addEventListener('click',() => {
   document.getElementById('rs-bullet-blue').innerHTML = parseInt(document.getElementById('rs-bullet-blue').innerHTML) - 1;
   changeAdditionalBackgroundColor();
-})
+});
 
 
