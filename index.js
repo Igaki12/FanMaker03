@@ -165,15 +165,26 @@ fontframeUp.addEventListener('click',() => {
       }
   });
   console.log("あ");
+const changeAdditionalBackgroundColor = () => {
+  console.log('changeAdditionalBackgroundCOlor');
+  document.getElementById('additional-background-close-btn').style
+   = "background-color:rgb(" + document.getElementById('rs-bullet-red').innerHTML
+   + "," + document.getElementById('rs-bullet-green').innerHTML
+   + "," + document.getElementById('rs-bullet-blue').innerHTML + ");";
+
+}
 
 document.getElementById('rs-range-line-red').addEventListener('input',() => {
   document.getElementById('rs-bullet-red').innerHTML = document.getElementById('rs-range-line-red').value;
+  changeAdditionalBackgroundColor;
 });
 document.getElementById('rs-range-line-green').addEventListener('input',() => {
   document.getElementById('rs-bullet-green').innerHTML = document.getElementById('rs-range-line-green').value;
+  changeAdditionalBackgroundColor;
 });
 document.getElementById('rs-range-line-blue').addEventListener('input',() => {
   document.getElementById('rs-bullet-blue').innerHTML = document.getElementById('rs-range-line-blue').value;
+  changeAdditionalBackgroundColor;
 });
 
 

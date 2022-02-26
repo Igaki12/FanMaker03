@@ -158,7 +158,6 @@ header > p {
   height: 100px;
   border-radius: 50px;
   border: 2px solid #777777;
-  background-color: aqua;
   grid-row: 1/2;
   grid-column: 1;
 }
@@ -229,7 +228,6 @@ header > p {
   font-weight: bold;
   margin: 0 auto 0 20px;
   -webkit-text-stroke: 1px #fff;
-  background-color: rgb(94, 105, 253);
   color: #555555;
   font-size: large;
   border-radius: 25px;
