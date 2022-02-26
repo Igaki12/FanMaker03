@@ -40,7 +40,6 @@ header > p {
   max-width: 375px;
   height: auto;
   border: none;
-  background-color: bisque;
 }
 .fontframe-flex {
   display: flex;

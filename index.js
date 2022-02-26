@@ -168,10 +168,14 @@ fontframeUp.addEventListener('click',() => {
 const changeAdditionalBackgroundColor = () => {
   console.log('changeAdditionalBackgroundCOlor');
   document.getElementById('additional-background-close-btn').style
-   = "background-color:rgb(" + document.getElementById('rs-bullet-red').innerHTML
-   + "," + document.getElementById('rs-bullet-green').innerHTML
-   + "," + document.getElementById('rs-bullet-blue').innerHTML + ");";
+  = "background-color:rgb(" + document.getElementById('rs-bullet-red').innerHTML
+  + "," + document.getElementById('rs-bullet-green').innerHTML
+  + "," + document.getElementById('rs-bullet-blue').innerHTML + ");";
 
+  document.getElementById('backgroundImg').style
+  = "background-color:rgb(" + document.getElementById('rs-bullet-red').innerHTML
+  + "," + document.getElementById('rs-bullet-green').innerHTML
+  + "," + document.getElementById('rs-bullet-blue').innerHTML + ");";
 }
 
 document.getElementById('rs-range-line-red').addEventListener('input',() => {
