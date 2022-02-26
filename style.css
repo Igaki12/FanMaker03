@@ -389,6 +389,7 @@ header > p {
   font-size: large;
   margin-right: 10px;
   margin-top: 27px;
+  width: 35px;
 }
 .rangeBtn {
   width: 30px;
