@@ -94,7 +94,7 @@ const reloadBackgroundDetailColorRange = (colorText) => {
   document.getElementById('rs-range-line-red').value = redValue;
   document.getElementById('rs-range-line-green').value = greenValue;
   document.getElementById('rs-range-line-blue').value = blueValue;
-  console.log(`${colorText} = rgb(${redValue},${greenValue},${blueValue}) redValue=${document.getElementById('rs-range-line-red').value}`);
+  console.log(`${colorText} = rgb(${redValue},${greenValue},${blueValue}) redValue=${document.getElementById('rs-range-line-red').value},greenValue=${document.getElementById('rs-range-line-green').value},blueValue=${document.getElementById('rs-range-line-blue').value}`);
 };
 const backStartPanel = () => {
   startPanel.style = "display: display;";
