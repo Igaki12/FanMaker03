@@ -176,15 +176,15 @@ const changeAdditionalBackgroundColor = () => {
 
 document.getElementById('rs-range-line-red').addEventListener('input',() => {
   document.getElementById('rs-bullet-red').innerHTML = document.getElementById('rs-range-line-red').value;
-  changeAdditionalBackgroundColor;
+  changeAdditionalBackgroundColor();
 });
 document.getElementById('rs-range-line-green').addEventListener('input',() => {
   document.getElementById('rs-bullet-green').innerHTML = document.getElementById('rs-range-line-green').value;
-  changeAdditionalBackgroundColor;
+  changeAdditionalBackgroundColor();
 });
 document.getElementById('rs-range-line-blue').addEventListener('input',() => {
   document.getElementById('rs-bullet-blue').innerHTML = document.getElementById('rs-range-line-blue').value;
-  changeAdditionalBackgroundColor;
+  changeAdditionalBackgroundColor();
 });
 
 
