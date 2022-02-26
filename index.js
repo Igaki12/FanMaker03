@@ -192,6 +192,10 @@ fontframeUp.addEventListener('click',() => {
   if(parseInt(fontframeNumber.textContent) > 4) return;
   fontframeNumber.textContent = parseInt(fontframeNumber.textContent) + 1;
 })
+document.getElementById('nowBackgroundColorBtn').addEventListener('click', () => {
+  document.getElementById('backgroundImg').style
+  = "background-color: " + document.getElementById('nowBackgroundColorBtn').style.backgroundColor;
+});
 // 円形スライダーの挙動
   var circleSlider = document.getElementById('circle-slider');
   var radius = 75;
