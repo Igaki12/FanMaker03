@@ -34,6 +34,10 @@ let existColorList= [
 function addExistBackgroundColorBtn(newColorText) {
   existColorList.unshift(newColorText);
   console.log(existColorList);
+  let parent = document.getElementById('exist-background-parent');
+  while(parent.firstChild){
+    parent.removeChild(parent.firstChild);
+  };
   existColorList.map((value, index) => {
     let child = document.createElement("button");
     child.id = index;
