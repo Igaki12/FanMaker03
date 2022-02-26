@@ -187,4 +187,17 @@ document.getElementById('rs-range-line-blue').addEventListener('input',() => {
   changeAdditionalBackgroundColor();
 });
 
+document.getElementById('background-red-plus').addEventListener('click',() => {
+  document.getElementById('rs-bullet-red').innerHTML = parseInt(document.getElementById('rs-bullet-red').innerHTML) + 1;
+  changeAdditionalBackgroundColor();
+});
+document.getElementById('background-green-plus').addEventListener('click',() => {
+  document.getElementById('rs-bullet-green').innerHTML = parseInt(document.getElementById('rs-bullet-green').innerHTML) + 1;
+  changeAdditionalBackgroundColor();
+});
+document.getElementById('background-blue-plus').addEventListener('click',() => {
+  document.getElementById('rs-bullet-blue').innerHTML = parseInt(document.getElementById('rs-bullet-blue').innerHTML) + 1;
+  changeAdditionalBackgroundColor();
+})
+
 
