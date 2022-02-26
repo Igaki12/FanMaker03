@@ -120,9 +120,9 @@ const openBackgroundPanel = () => {
   startPanel.style = "display: none;";
   addExistBackgroundColorBtn();
   addBasicBackgroundColorBtn();
-  console.log(document.getElementById('backgroundImg').style);
+  console.log(document.getElementById('backgroundImg').style.backgroundColor);
   document.getElementById('nowBackgroundColorBtn').style 
-  = document.getElementById('backgroundImg').style;
+  = "background-color: " + document.getElementById('backgroundImg').style.backgroundColor;
 }
 const openEditAnglePanel = () => {
   editAnglePanel.style = "display: display";
