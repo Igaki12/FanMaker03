@@ -83,9 +83,6 @@ const openBackgroundDetailPanel = () => {
   additionalBackgroundPanel.style = "display: display;";
   additionalBackgroundOpenBtn.style = "display: none;";
   editBackgroundBack.removeEventListener('click',backStartPanel);
-  console.log(document.getElementById('backgroundImg'));
-  document.getElementById('nowBackgroundColorBtn').style 
-  = document.getElementById('backgroundImg').style;
 }
 const closeBackgroundDetailPanel = () => {
   additionalBackgroundPanel.style = 'display: none;';
@@ -123,6 +120,9 @@ const openBackgroundPanel = () => {
   startPanel.style = "display: none;";
   addExistBackgroundColorBtn();
   addBasicBackgroundColorBtn();
+  console.log(document.getElementById('backgroundImg').style);
+  document.getElementById('nowBackgroundColorBtn').style 
+  = document.getElementById('backgroundImg').style;
 }
 const openEditAnglePanel = () => {
   editAnglePanel.style = "display: display";
