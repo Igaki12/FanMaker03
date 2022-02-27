@@ -16,6 +16,18 @@ header {
 header > p {
   line-height: 50px;
 }
+.character {
+  top: 200px;
+  left: 50px;
+  height: 70px;
+  cursor: move;
+  position: absolute;
+  z-index: 1000;
+}
+.active {
+  z-index: 1001;
+  border: #000000 solid 1px;
+}
 .control-panel {
   width: 100%;
   min-height: 30vh;

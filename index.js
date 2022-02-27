@@ -313,3 +313,81 @@ document.getElementById('background-blue-minus').addEventListener('click',() => 
 });
 
 
+
+
+
+// ここから文字の作成に関するコード
+let characterList = [];
+let characters = document.getElementsByClassName("character");
+for(let i = 0;i<characters.length; i++){
+  characters[i].addEventListener('mousedown',dragStart);
+  characters[i].addEventListener('touchstart',dragStart);
+}
+document.getElementById('create-font-btn').addEventListener('click',() => {
+  const size = 100;
+  const text = "作成中";
+  const color = "rgb(0,0,0)";
+  let newFont = document.createElement('canvas');
+  newFont.className = 'character';
+  newFont.classList.add('active');
+  newFont.textContent = text;
+  newFont.height = size + 30;
+  newFont.style.height = `${size+30}px`;
+  document.getElementById('operating-screen').appendChild(newFont);
+  console.log(newFont);
+  characters = document.getElementsByClassName('character');
+  ctx = characters[characters.length - 1].getContext('2d');
+  ctx.lineWidth = 7;
+  ctx.fillStyle = color;
+  ctx.font = `bold ${size}px fantasy`;
+  characters[characters.length -1].width = Math.ceil(ctx.measureText(text).width) + 30;
+  ctx.lineWidth = 7;
+  ctx.fillStyle = color;
+  ctx.font = `bold ${size}px fantasy`;
+  ctx.fillText(text,15,size);
+  characters[characters.length -1].style.width = Math.ceil(ctx.measureText(text).width) + 30 + "px";
+  console.log(Math.ceil(ctx.measureText(text).width) +10);
+})
+// ここから文字の移動に関するコード
+const dragStart = (e) => {
+  let drags = document.getElementsByClassName('active');
+  for(let i=0;i<drags.length;i++){
+    drags[i].classList.remove('active');
+  }
+  this.classList.add('active');
+  let event = e.changedTouches[0];
+  if(e.type === 'mousedown'){
+    event = e;
+  }
+  let x = event.pageX - this.offsetLeft;
+  let y = event.pageY - this.offsetTop;
+  document.body.addEventListener('mousemove',dragMove);
+  document.body.addEventListener('touchmove',dragMove);
+}
+const dragMove = (e) => {
+  let active = document.getElementsByClassName('active')[0];
+  let event = e.changedTouches[0];
+  if(e.type === 'mousemove'){
+    event = e;
+  }
+  e.preventDefault();
+  active.style.top = event.pageY - y + "px";
+  active.style.left = event.pageX - X + "px";
+  // ここに移動範囲の制限を記述する
+  if(event.pageY - y > 500){
+    active.style.top = "495px";
+    dragEnd();
+  }
+
+  active.addEventListener('mouseup',dragEnd);
+  active.addEventListener('touchend',dragEnd);
+  document.body.addEventListener('mouseleave',dragEnd);
+  document.body.addEventListener('touchcancel',dragEnd);
+}
+const dragEnd = () => {
+  let active = document.getElementsByClassName('active')[0];
+  document.body.removeEventListener('mousemove',dragMove);
+  active.removeEventListener('mouseup',dragEnd);
+  document.body.removeEventListener('touchmove',dragMove);
+  active.removeEventListener('touchend',dragEnd);
+}
