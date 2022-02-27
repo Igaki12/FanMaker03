@@ -12,6 +12,7 @@ header {
   width: 90%;
   height: 50px;
   background-color: rgb(189, 189, 189);
+  z-index: 1200;
 }
 header > p {
   line-height: 50px;
@@ -29,6 +30,7 @@ header > p {
   border: #000000 solid 1px;
 }
 .control-panel {
+  z-index: 1200;
   width: 100%;
   min-height: 30vh;
   background-color: rgb(255, 197, 176);
