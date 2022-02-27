@@ -363,6 +363,8 @@ function dragStart(e) {
   if(e.type === 'mousedown'){
     event = e;
   }
+  console.log(this.offsetLeft);
+  console.log(this.offsetTop);
   x = event.pageX - this.offsetLeft;
   y = event.pageY - this.offsetTop;
   document.body.addEventListener('mousemove',dragMove);
@@ -374,7 +376,7 @@ function dragMove(e) {
   if (e.type === 'mousemove') {
     event = e;
   }
-  // e.preventDefault();
+  e.preventDefault();
   active.style.top = event.pageY - y + "px";
   active.style.left = event.pageX - X + "px";
   // ここに移動範囲の制限を記述する
