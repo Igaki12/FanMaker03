@@ -379,14 +379,14 @@ function dragMove(e) {
   active.style.top = event.pageY - y + "px";
   active.style.left = event.pageX - x + "px";
   // ここに移動範囲の制限を記述する
-  if(event.pageX - x > 375){
-    active.style.top = "370px";
+  if(event.pageX - x > 350){
+    active.style.top = "345px";
     dragEnd();
   }
-  // if (event.pageY - y > 500) {
-  //   active.style.top = "495px";
-  //   dragEnd();
-  // }
+  if (event.pageY - y > 500) {
+    active.style.top = "495px";
+    dragEnd();
+  }
   active.addEventListener('mouseup', dragEnd);
   document.body.addEventListener('mouseleave', dragEnd);
   active.addEventListener('touchend', dragEnd);
