@@ -337,16 +337,16 @@ document.getElementById('create-font-btn').addEventListener('click',() => {
   console.log(newFont);
   characters = document.getElementsByClassName('character');
   console.log(characters);
-  ctx = characters[0].getContext("2d");
+  let ctx = characters[characters.length - 1].getContext("2d");
   ctx.lineWidth = 7;
   ctx.fillStyle = color;
   ctx.font = `bold ${size}px fantasy`;
-  characters[0].width = Math.ceil(ctx.measureText(text).width) + 30;
+  characters[characters.length -1].width = Math.ceil(ctx.measureText(text).width) + 30;
   ctx.lineWidth = 7;
   ctx.fillStyle = color;
   ctx.font = `bold ${size}px fantasy`;
   ctx.fillText(text,15,size);
-  characters[0].style.width = Math.ceil(ctx.measureText(text).width) + 30 + "px";
+  characters[characters.length -1].style.width = Math.ceil(ctx.measureText(text).width) + 30 + "px";
   console.log(Math.ceil(ctx.measureText(text).width) +10);
 })
 // ここから文字の移動に関するコード
