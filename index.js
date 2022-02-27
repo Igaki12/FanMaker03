@@ -345,12 +345,12 @@ document.getElementById('create-font-btn').addEventListener('click',() => {
   console.log(Math.ceil(ctx.measureText(text).width) +10);
   characters = document.getElementsByClassName("character");
 for(let i = 0;i<characters.length; i++){
-  characters[i].addEventListener('mousedown',dragStart);
-  characters[i].addEventListener('touchstart',dragStart);
+  characters[i].addEventListener('mousedown',dragStart,{passive:false});
+  characters[i].addEventListener('touchstart',dragStart,{passive:false});
 }
 });
 // ここから文字の移動に関するコード
-const dragStart = (e) => {
+function dragStart(e) {
   let drags = document.getElementsByClassName('active');
   for(let i=0;i<drags.length;i++){
     drags[i].classList.remove('active');
@@ -366,30 +366,30 @@ const dragStart = (e) => {
   document.body.addEventListener('mousemove',dragMove);
   document.body.addEventListener('touchmove',dragMove);
 }
-const dragMove = (e) => {
+function dragMove(e) {
   let active = document.getElementsByClassName('active')[0];
   let event = e.changedTouches[0];
-  if(e.type === 'mousemove'){
+  if (e.type === 'mousemove') {
     event = e;
   }
   e.preventDefault();
   active.style.top = event.pageY - y + "px";
   active.style.left = event.pageX - X + "px";
   // ここに移動範囲の制限を記述する
-  if(event.pageY - y > 500){
+  if (event.pageY - y > 500) {
     active.style.top = "495px";
     dragEnd();
   }
 
-  active.addEventListener('mouseup',dragEnd);
-  active.addEventListener('touchend',dragEnd);
-  document.body.addEventListener('mouseleave',dragEnd);
-  document.body.addEventListener('touchcancel',dragEnd);
+  active.addEventListener('mouseup', dragEnd);
+  active.addEventListener('touchend', dragEnd);
+  document.body.addEventListener('mouseleave', dragEnd);
+  document.body.addEventListener('touchcancel', dragEnd);
 }
-const dragEnd = () => {
+function dragEnd() {
   let active = document.getElementsByClassName('active')[0];
-  document.body.removeEventListener('mousemove',dragMove);
-  active.removeEventListener('mouseup',dragEnd);
-  document.body.removeEventListener('touchmove',dragMove);
-  active.removeEventListener('touchend',dragEnd);
+  document.body.removeEventListener('mousemove', dragMove);
+  active.removeEventListener('mouseup', dragEnd);
+  document.body.removeEventListener('touchmove', dragMove);
+  active.removeEventListener('touchend', dragEnd);
 }
