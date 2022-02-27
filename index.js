@@ -318,11 +318,6 @@ document.getElementById('background-blue-minus').addEventListener('click',() => 
 
 // ここから文字の作成に関するコード
 let characterList = [];
-let characters = document.getElementsByClassName("character");
-for(let i = 0;i<characters.length; i++){
-  characters[i].addEventListener('mousedown',dragStart);
-  characters[i].addEventListener('touchstart',dragStart);
-}
 document.getElementById('create-font-btn').addEventListener('click',() => {
   const size = 100;
   const text = "作成中";
@@ -335,7 +330,7 @@ document.getElementById('create-font-btn').addEventListener('click',() => {
   newFont.style.height = `${size+30}px`;
   document.getElementById('operating-screen').appendChild(newFont);
   console.log(newFont);
-  characters = document.getElementsByClassName('character');
+  let characters = document.getElementsByClassName('character');
   console.log(characters);
   let ctx = characters[characters.length - 1].getContext("2d");
   ctx.lineWidth = 7;
@@ -348,7 +343,12 @@ document.getElementById('create-font-btn').addEventListener('click',() => {
   ctx.fillText(text,15,size);
   characters[characters.length -1].style.width = Math.ceil(ctx.measureText(text).width) + 30 + "px";
   console.log(Math.ceil(ctx.measureText(text).width) +10);
-})
+  characters = document.getElementsByClassName("character");
+for(let i = 0;i<characters.length; i++){
+  characters[i].addEventListener('mousedown',dragStart);
+  characters[i].addEventListener('touchstart',dragStart);
+}
+});
 // ここから文字の移動に関するコード
 const dragStart = (e) => {
   let drags = document.getElementsByClassName('active');
