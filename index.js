@@ -347,8 +347,8 @@ document.getElementById('create-font-btn').addEventListener('click',() => {
   console.log(Math.ceil(ctx.measureText(text).width) +10);
   characters = document.getElementsByClassName("character");
 for(let i = 0;i<characters.length; i++){
-  characters[i].addEventListener('mousedown',dragStart,{passive:false});
-  characters[i].addEventListener('touchstart',dragStart,{passive:false});
+  characters[i].addEventListener('mousedown',dragStart);
+  characters[i].addEventListener('touchstart',dragStart);
 }
 });
 // ここから文字の移動に関するコード
@@ -367,7 +367,7 @@ function dragStart(e) {
   y = event.pageY - this.offsetTop;
   document.body.addEventListener('mousemove',dragMove);
   document.body.addEventListener('touchmove',dragMove);
-}
+};
 function dragMove(e) {
   let active = document.getElementsByClassName('active')[0];
   let event = e.changedTouches[0];
@@ -387,11 +387,11 @@ function dragMove(e) {
   active.addEventListener('touchend', dragEnd);
   document.body.addEventListener('mouseleave', dragEnd);
   document.body.addEventListener('touchcancel', dragEnd);
-}
+};
 function dragEnd() {
   let active = document.getElementsByClassName('active')[0];
   document.body.removeEventListener('mousemove', dragMove);
   active.removeEventListener('mouseup', dragEnd);
   document.body.removeEventListener('touchmove', dragMove);
   active.removeEventListener('touchend', dragEnd);
-}
+};
