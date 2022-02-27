@@ -187,7 +187,17 @@ const closeEditFontframePanel = () => {
   editFontframePanel.style = "display: none;";
   editFontPanel.style = "display: display;";
 }
+const openEditThicknessPanel = () => {
+  document.getElementById('edit-thickness-panel').style = "display: display;";
+  editFontPanel.style = "display: none;";
+}
+const closeEditThicknessPanel = () => {
+  document.getElementById('edit-thickness-panel').style = "display: none;";
+  editFontPanel.style = "display: display;";
+}
 createFontBtn.addEventListener('click',openEditFontPanel);
+document.getElementById('thickness-btn').addEventListener('click',openEditThicknessPanel);
+document.getElementById('edit-thickness-back-btn').addEventListener('click',closeEditThicknessPanel);
 editBackgroundBtn.addEventListener('click',openBackgroundPanel);
 editFontBack.addEventListener('click',backStartPanel);
 editBackgroundBack.addEventListener('click',backStartPanel);
