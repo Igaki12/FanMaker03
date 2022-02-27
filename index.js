@@ -147,9 +147,13 @@ const openBackgroundPanel = () => {
   startPanel.style = "display: none;";
   addExistBackgroundColorBtn();
   addBasicBackgroundColorBtn();
-  console.log(document.getElementById('backgroundImg').style.backgroundColor);
   document.getElementById('nowBackgroundColorBtn').style 
   = "background-color: " + document.getElementById('backgroundImg').style.backgroundColor;
+  const resetColor = document.getElementById('backgroundImg').style.backgroundColor;
+  console.log(resetColor);
+  document.getElementById('reset-background-color-btn').addEventListener('click',() => {
+    document.getElementById('backgroundImg').style.backgroundColor = resetColor;
+  });
 }
 const openEditAnglePanel = () => {
   editAnglePanel.style = "display: display";
