@@ -337,7 +337,7 @@ document.getElementById('create-font-btn').addEventListener('click',() => {
   console.log(newFont);
   characters = document.getElementsByClassName('character');
   console.log(characters);
-  ctx = characters[characters.length - 1].getContext('2d');
+  ctx = characters[characters.length - 1].getContext("2d");
   ctx.lineWidth = 7;
   ctx.fillStyle = color;
   ctx.font = `bold ${size}px fantasy`;
