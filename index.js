@@ -375,7 +375,7 @@ function dragMove(e) {
   if (e.type === 'mousemove') {
     event = e;
   }
-  e.preventDefault();
+  // e.preventDefault();
   active.style.top = event.pageY - y + "px";
   active.style.left = event.pageX - x + "px";
   // ここに移動範囲の制限を記述する
