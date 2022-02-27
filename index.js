@@ -380,7 +380,7 @@ function dragMove(e) {
   active.style.left = event.pageX - x + "px";
   // ここに移動範囲の制限を記述する
   if(event.pageX - x > 340){
-    active.style.top = "320px";
+    active.style.left = "320px";
     dragEnd();
   }
   if (event.pageY - y > 300) {
