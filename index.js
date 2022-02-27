@@ -318,6 +318,8 @@ document.getElementById('background-blue-minus').addEventListener('click',() => 
 
 // ここから文字の作成に関するコード
 let characterList = [];
+let x;
+let y;
 document.getElementById('create-font-btn').addEventListener('click',() => {
   const size = 100;
   const text = "作成中";
@@ -361,8 +363,8 @@ function dragStart(e) {
   if(e.type === 'mousedown'){
     event = e;
   }
-  let x = event.pageX - this.offsetLeft;
-  let y = event.pageY - this.offsetTop;
+  x = event.pageX - this.offsetLeft;
+  y = event.pageY - this.offsetTop;
   document.body.addEventListener('mousemove',dragMove);
   document.body.addEventListener('touchmove',dragMove);
 }
