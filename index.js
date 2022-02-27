@@ -43,7 +43,8 @@ function addBasicBackgroundColorBtn(){
     child.style.backgroundColor = value;
     child.className = "colorBtn palette";
     child.addEventListener('click',() => {
-      document.getElementById('backgroundImg').style = `background-color: ${value};`
+      document.getElementById('backgroundImg').style = `background-color: ${value};`;
+      reloadBackgroundDetailColorRange(value);
     });
     child = document.getElementById('basic-background-parent').appendChild(child);
     console.log(child);
@@ -67,7 +68,8 @@ function addExistBackgroundColorBtn(newColorText) {
     child.style.backgroundColor = value;
     child.className = "colorBtn palette";
     child.addEventListener('click',() => {
-      document.getElementById('backgroundImg').style = `background-color: ${value};`
+      document.getElementById('backgroundImg').style = `background-color: ${value};`;
+      reloadBackgroundDetailColorRange(value);
     });
     child = document.getElementById('exist-background-parent').appendChild(child);
     console.log(child);
