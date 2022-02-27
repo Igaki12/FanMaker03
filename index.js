@@ -318,8 +318,8 @@ document.getElementById('background-blue-minus').addEventListener('click',() => 
 
 // ここから文字の作成に関するコード
 let characterList = [];
-let x;
-let y;
+var x;
+var y;
 document.getElementById('create-font-btn').addEventListener('click',() => {
   const size = 100;
   const text = "作成中";
@@ -346,10 +346,10 @@ document.getElementById('create-font-btn').addEventListener('click',() => {
   characters[characters.length -1].style.width = Math.ceil(ctx.measureText(text).width) + 30 + "px";
   console.log(Math.ceil(ctx.measureText(text).width) +10);
   characters = document.getElementsByClassName("character");
-for(let i = 0;i<characters.length; i++){
-  characters[i].addEventListener('mousedown',dragStart);
-  characters[i].addEventListener('touchstart',dragStart);
-}
+  for(let i = 0;i<characters.length; i++){
+    characters[i].addEventListener('mousedown',dragStart);
+    characters[i].addEventListener('touchstart',dragStart);
+  }
 });
 // ここから文字の移動に関するコード
 function dragStart(e) {
@@ -357,7 +357,6 @@ function dragStart(e) {
   for(let i=0;i<drags.length;i++){
     drags[i].classList.remove('active');
   }
-  console.log(this);
   this.classList.add('active');
   let event = e.changedTouches[0];
   if(e.type === 'mousedown'){
@@ -385,8 +384,8 @@ function dragMove(e) {
   //   dragEnd();
   // }
   active.addEventListener('mouseup', dragEnd);
-  active.addEventListener('touchend', dragEnd);
   document.body.addEventListener('mouseleave', dragEnd);
+  active.addEventListener('touchend', dragEnd);
   document.body.addEventListener('touchcancel', dragEnd);
 };
 function dragEnd() {
