@@ -355,7 +355,7 @@ const dragStart = (e) => {
   for(let i=0;i<drags.length;i++){
     drags[i].classList.remove('active');
   }
-  console.log(this.classList);
+  console.log(this);
   this.classList.add('active');
   let event = e.changedTouches[0];
   if(e.type === 'mousedown'){
