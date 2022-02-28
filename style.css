@@ -354,7 +354,15 @@ header > p {
 #rs-range-line-fontsize {
   background: gray;
 }
+#rs-range-line-thickness {
+  background: #aaaaaa;
+}
 #rs-bullet-fontsize {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+#rs-bullet-thickness {
   width: 100%;
   margin: 0 auto;
   text-align: center;
