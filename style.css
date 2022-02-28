@@ -43,6 +43,7 @@ header > p {
   transition: 300ms;
 }
 #operating-screen {
+  position: absolute;
   width: 375px;
   height: auto;
   margin: 0 auto;
@@ -50,6 +51,7 @@ header > p {
   border: none;
 }
 #backgroundImg {
+  position: absolute;
   margin-top: 0px;
   max-width: 375px;
   height: auto;
