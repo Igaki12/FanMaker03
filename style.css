@@ -158,6 +158,9 @@ header > p {
 #rs-bullet-fontsize {
   padding-top: 50px;
 }
+#rs-bullet-thickness {
+  padding-top: 50px;
+}
 .now-color-palette {
   display: grid;
   grid-template-columns: 150px 1fr;
