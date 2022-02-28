@@ -43,15 +43,13 @@ header > p {
   transition: 300ms;
 }
 #operating-screen {
-  position: absolute;
-  width: 375px;
+  width: 100%;
   height: auto;
   margin: 0 auto;
   margin-top: 80px;
   border: none;
 }
 #backgroundImg {
-  position: absolute;
   margin-top: 0px;
   max-width: 375px;
   height: auto;
