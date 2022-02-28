@@ -331,7 +331,7 @@ let characterList = [];
 var x;
 var y;
 document.getElementById('create-font-btn').addEventListener('click',() => {
-  const size = 100;
+  const size = 60;
   const text = "作成中";
   const color = "rgb(0,0,0)";
   let newFont = document.createElement('canvas');
