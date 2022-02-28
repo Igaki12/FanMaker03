@@ -361,6 +361,30 @@ document.getElementById('create-font-btn').addEventListener('click',() => {
     characters[i].addEventListener('touchstart',dragStart);
   }
 });
+// ここから文字の色に関するコード
+function addExistFontColorBtn(newColorText) {
+  console.log(existColorList.indexOf(newColorText));
+  if(existColorList.indexOf(newColorText) === -1){
+    if(newColorText){
+      existColorList.unshift(newColorText);
+    }
+  }
+  let parent = document.getElementById('exist-fontcolor-parent');
+  while(parent.firstChild){
+    parent.removeChild(parent.firstChild);
+  };
+  existColorList.map((value, index) => {
+    let child = document.createElement("button");
+    child.id = `fontcolor-exist-color${index}`;
+    child.style.backgroundColor = value;
+    child.className = "colorBtn palette";
+    child.addEventListener('click',() => {
+// 今後内容を追記（active文字の色を変更する）
+    });
+    child = document.getElementById('exist-fontcolor-parent').appendChild(child);
+    console.log(child);
+  });
+}
 // ここから文字の移動に関するコード
 function dragStart(e) {
   let drags = document.getElementsByClassName('active');
