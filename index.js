@@ -415,8 +415,16 @@ function dragMove(e) {
     active.style.left = "280px";
     dragEnd();
   }
+  if(event.pageX -x < 0){
+    active.style.left="20px";
+    dragEnd();
+  }
   if (event.pageY - y > 300) {
     active.style.top = "280px";
+    dragEnd();
+  }
+  if(event.pageY - y < 20){
+    active.style.top = "40px";
     dragEnd();
   }
   active.addEventListener('mouseup', dragEnd);
