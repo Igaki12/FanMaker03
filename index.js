@@ -423,8 +423,8 @@ function dragMove(e) {
     active.style.top = "280px";
     dragEnd();
   }
-  if(event.pageY - y < 20){
-    active.style.top = "40px";
+  if(event.pageY - y < 40){
+    active.style.top = "60px";
     dragEnd();
   }
   active.addEventListener('mouseup', dragEnd);
