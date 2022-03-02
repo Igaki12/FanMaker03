@@ -324,10 +324,10 @@ document.getElementById('background-blue-minus').addEventListener('click',() => 
 
 // それぞれボタンのイメージロゴを作成
 function drawCanvas(context,text,font,size,stroke,thickness,color,angle){
-  context.lineWidth = thickness;
-  context.fillStyle = color;
-  context.font = `${size}px ${font}`;
-  context.width = Math.ceil(context.measureText(text).width) + 30;
+  // context.lineWidth = thickness;
+  // context.fillStyle = color;
+  // context.font = `${size}px ${font}`;
+  // context.width = Math.ceil(context.measureText(text).width) + 30;
   context.lineWidth = thickness;
   context.fillStyle = color;
   context.font = `${size}px ${font}`;
