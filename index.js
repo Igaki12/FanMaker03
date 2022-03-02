@@ -352,6 +352,13 @@ logo = document.getElementById('font-frame-logo').getContext("2d");
 drawCanvasLogo(logo,"あ","MS ゴシック",80,1,6,"rgb(255,255,255)",0);
 logo = document.getElementById('thickness-logo').getContext("2d");
 drawCanvasLogo(logo,"あ","fantasy",80,0,15,"rgb(127,127,127)",0);
+logo = document.getElementById('font-color-logo').getContext("2d");
+drawCanvasLogo(logo,"あ","fantasy",80,0,6,"linear-gradient(70deg, blue, pink)",0);
+logo = document.getElementById('font-size-logo').getContext("2d");
+drawCanvasLogo(logo,"あ","fantasy",50,0,6,"rgb(127,127,127)",0);
+logo = document.getElementById('font-angle-logo').getContext("2d");
+drawCanvasLogo(logo,"あ","fantasy",80,0,6,"rgb(127,127,127)",0);
+
 
 
 
