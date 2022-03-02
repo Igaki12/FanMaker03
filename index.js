@@ -354,7 +354,7 @@ logo = document.getElementById('thickness-logo').getContext("2d");
 drawCanvasLogo(logo,"あ","fantasy",80,0,15,"rgb(127,127,127)",0);
 logo = document.getElementById('font-color-logo').getContext("2d");
 drawCanvasLogo(logo,"あ","fantasy",80,0,6,"rgb(255,63,63)",0);
-logo = document.getElementById('font-size-logo').getContext("2d");
+logo = document.getElementById('font-size-logo1').getContext("2d");
 drawCanvasLogo(logo,"あ","fantasy",50,0,6,"rgb(127,127,127)",0);
 logo = document.getElementById('font-angle-logo').getContext("2d");
 drawCanvasLogo(logo,"あ","fantasy",80,0,6,"rgb(127,127,127)",0);
