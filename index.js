@@ -346,9 +346,9 @@ function drawCanvasLogo(context,text,font,size,stroke,thickness,color,angle){
   context.innerText = `${text},,${font},,${size},,${stroke},,${thickness},,${color},,${angle}`;
 }
 let logo = document.getElementById('font-type-logo').getContext("2d");
-drawCanvasLogo(logo,"あ","MS 明朝",60,0,6,"rgb(127,127,127)",0);
+drawCanvasLogo(logo,"あ","MS 明朝",80,0,6,"rgb(127,127,127)",0);
 let logo2 = document.getElementById('font-frame-logo').getContext("2d");
-drawCanvasLogo(logo2,"あ","MS ゴシック",60,1,6,"rgb(255,255,255)",0);
+drawCanvasLogo(logo2,"あ","MS ゴシック",80,1,6,"rgb(255,255,255)",0);
 
 
 
