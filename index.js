@@ -339,6 +339,7 @@ function drawCanvasLogo(context,text,font,size,stroke,thickness,color,angle){
     context.lineWidth = strokeLineThickness;
     context.strokeStyle = "blue";
     context.strokeText(text,15,size);
+    strokeTimes--;
   }
   console.log(Math.ceil(context.measureText(text).width) + 10);
   // context.style.width = Math.ceil(context.measureText(text).width) + 30 + "px";
