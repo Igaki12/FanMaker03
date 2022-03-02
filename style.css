@@ -89,11 +89,12 @@ header > p {
 .btnImg {
   width: 90px;
   height: auto;
+  margin-bottom: 10px;
 }
 .btnText {
   width: 120px;
   height: auto;
-  margin-top: -30px;
+  margin-top: -20px;
   font-size: large;
   color: rgb(75, 75, 75);
   font-family: 'Ubuntu', sans-serif;
