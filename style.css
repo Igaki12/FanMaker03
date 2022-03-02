@@ -81,6 +81,8 @@ header > p {
   margin-left: 10px;
   /* background: none;
   border: none; */
+  border-radius: 0;
+  border: none;
 }
 .btnCanvas {
   width: 90px;
