@@ -327,7 +327,7 @@ function drawCanvas(canvas,text,font,size,stroke,thickness,color,angle){
   canvas.lineWidth = thickness;
   canvas.fillStyle = color;
   canvas.font = `${size}px ${font}`;
-  canvas.width = Math.ceil(ctx.measureText(text).width) + 30;
+  canvas.width = Math.ceil(canvas.measureText(text).width) + 30;
   canvas.lineWidth = thickness;
   canvas.fillStyle = color;
   canvas.font = `${size}px ${font}`;
