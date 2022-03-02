@@ -323,11 +323,12 @@ document.getElementById('background-blue-minus').addEventListener('click',() => 
 });
 
 // それぞれボタンのイメージロゴを作成
-function drawCanvas(context,text,font,size,stroke,thickness,color,angle){
+function drawCanvasLogo(context,text,font,size,stroke,thickness,color,angle){
   // context.lineWidth = thickness;
   // context.fillStyle = color;
   // context.font = `${size}px ${font}`;
   // context.width = Math.ceil(context.measureText(text).width) + 30;
+  context.width = 90;
   context.lineWidth = thickness;
   context.fillStyle = color;
   context.font = `${size}px ${font}`;
@@ -345,7 +346,7 @@ function drawCanvas(context,text,font,size,stroke,thickness,color,angle){
   context.innerText = `${text},,${font},,${size},,${stroke},,${thickness},,${color},,${angle}`;
 }
 let logo = document.getElementById('font-type-logo').getContext("2d");
-drawCanvas(logo,"あ","MS 明朝",70,0,6,"rgb(127,127,127)",0);
+drawCanvasLogo(logo,"あ","MS 明朝",70,0,6,"rgb(127,127,127)",0);
 
 
 
