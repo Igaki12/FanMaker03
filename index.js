@@ -322,6 +322,33 @@ document.getElementById('background-blue-minus').addEventListener('click',() => 
   changeAdditionalBackgroundColor();
 });
 
+// それぞれボタンのイメージロゴを作成
+function drawCanvas(canvas,text,font,size,stroke,thickness,color,angle){
+  canvas.lineWidth = thickness;
+  canvas.fillStyle = color;
+  canvas.font = `${size}px ${font}`;
+  canvas.width = Math.ceil(ctx.measureText(text).width) + 30;
+  canvas.lineWidth = thickness;
+  canvas.fillStyle = color;
+  canvas.font = `${size}px ${font}`;
+  canvas.fillText(text,15,size);
+  let strokeTimes = stroke;
+  let strokeLineThickness = 0;
+  while(strokeTimes > 0){
+    strokeLineThickness += 2;
+    canvas.lineWidth = strokeLineThickness;
+    canvas.strokeStyle = "blue";
+    canvas.strokeText(text,15,size);
+  }
+  console.log(Math.ceil(canvas.measureText(text).width) + 10);
+  canvas.style.width = Math.ceil(canvas.measureText(text).width) + 30 + "px";
+  canvas.innerText = `${text},,${font},,${size},,${stroke},,${thickness},,${color},,${angle}`;
+}
+let logo = document.getElementById('font-type-logo').getContext("2d");
+drawCanvas(logo,"あ","MS 明朝",70,0,6,"rgb(127,127,127)",0);
+
+
+
 
 
 
