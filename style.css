@@ -83,6 +83,7 @@ header > p {
   border: none; */
   border-radius: 0;
   border: none;
+  background-color: rgb(255, 197, 176);
 }
 .btnCanvas {
   width: 90px;
