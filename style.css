@@ -234,6 +234,7 @@ header > p {
   display: flex;
   height: 30px;
   /* margin: 0 20px 0 auto; */
+  border-color: black;
   color: #555555;
   font-size: large;
   border-radius: 15px;
