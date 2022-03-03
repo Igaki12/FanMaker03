@@ -329,9 +329,9 @@ function drawCanvasLogo(context,text,font,size,stroke,thickness,color,angle){
   // context.font = `${size}px ${font}`;
   // context.width = Math.ceil(context.measureText(text).width) + 30;
   if(angle > 0){
-    context.translate(0,-55);
+    context.translate(-40,-40);
     console.log(10*Math.PI / 180);
-    context.rotate(45 * Math.PI / 180);
+    context.rotate(30 * Math.PI / 180);
   };
   context.lineWidth = thickness;
   context.fillStyle = color;
