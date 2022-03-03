@@ -341,7 +341,10 @@ function drawCanvasLogo(context,text,font,size,stroke,thickness,color,angle){
     context.strokeStyle = "blue";
     context.strokeText(text,15,size);
     strokeTimes--;
-  }
+  };
+  if(angle > 0){
+    context.rotate(10*Math.PI / 180);
+  };
   console.log(Math.ceil(context.measureText(text).width) + 10);
   // context.style.width = Math.ceil(context.measureText(text).width) + 30 + "px";
   context.innerText = `${text},,${font},,${size},,${stroke},,${thickness},,${color},,${angle}`;
@@ -349,7 +352,7 @@ function drawCanvasLogo(context,text,font,size,stroke,thickness,color,angle){
 let logo = document.getElementById('font-type-logo').getContext("2d");
 drawCanvasLogo(logo,"あ","serif",80,0,6,"rgb(127,127,127)",0);
 logo = document.getElementById('font-frame-logo').getContext("2d");
-drawCanvasLogo(logo,"あ","MS ゴシック",80,1,6,"rgb(255,255,255)",0);
+drawCanvasLogo(logo,"あ","MS ゴシック",80,2,6,"rgb(255,255,255)",0);
 logo = document.getElementById('thickness-logo').getContext("2d");
 drawCanvasLogo(logo,"あ","fantasy",80,0,15,"rgb(127,127,127)",0);
 logo = document.getElementById('font-color-logo').getContext("2d");
