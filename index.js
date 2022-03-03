@@ -334,9 +334,9 @@ function drawCanvasLogo(context,text,font,size,stroke,thickness,color,angle){
   context.font = `bold ${size}px ${font}`;
   context.fillText(text,15,size);
   let strokeTimes = stroke;
-  let strokeLineThickness = 0;
+  let strokeLineThickness = strokeTimes * 3;
   while(strokeTimes > 0){
-    strokeLineThickness += 2;
+    strokeLineThickness -= 3;
     context.lineWidth = strokeLineThickness;
     if(strokeTimes === 1){
       context.strokeStyle = "blue";
@@ -348,6 +348,7 @@ function drawCanvasLogo(context,text,font,size,stroke,thickness,color,angle){
     strokeTimes--;
   };
   if(angle > 0){
+    console.log(10*Math.PI / 180);
     context.rotate(10*Math.PI / 180);
   };
   console.log(Math.ceil(context.measureText(text).width) + 10);
