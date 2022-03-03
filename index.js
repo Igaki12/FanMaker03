@@ -328,6 +328,10 @@ function drawCanvasLogo(context,text,font,size,stroke,thickness,color,angle){
   // context.fillStyle = color;
   // context.font = `${size}px ${font}`;
   // context.width = Math.ceil(context.measureText(text).width) + 30;
+  if(angle > 0){
+    console.log(10*Math.PI / 180);
+    context.rotate(10*Math.PI / 180);
+  };
   context.lineWidth = thickness;
   context.fillStyle = color;
   console.log(`bold ${size}px ${font}`);
@@ -347,10 +351,7 @@ function drawCanvasLogo(context,text,font,size,stroke,thickness,color,angle){
     context.strokeText(text,15,size);
     strokeTimes--;
   };
-  if(angle > 0){
-    console.log(10*Math.PI / 180);
-    context.rotate(10*Math.PI / 180);
-  };
+
   console.log(Math.ceil(context.measureText(text).width) + 10);
   // context.style.width = Math.ceil(context.measureText(text).width) + 30 + "px";
   context.innerText = `${text},,${font},,${size},,${stroke},,${thickness},,${color},,${angle}`;
