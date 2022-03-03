@@ -338,7 +338,12 @@ function drawCanvasLogo(context,text,font,size,stroke,thickness,color,angle){
   while(strokeTimes > 0){
     strokeLineThickness += 2;
     context.lineWidth = strokeLineThickness;
-    context.strokeStyle = "blue";
+    if(strokeTimes === 1){
+      context.strokeStyle = "blue";
+    }
+    if(strokeTimes === 2){
+      context.strokeStyle = "navy";
+    }
     context.strokeText(text,15,size);
     strokeTimes--;
   };
@@ -360,7 +365,7 @@ drawCanvasLogo(logo,"あ","fantasy",80,0,6,"rgb(255,63,63)",0);
 logo = document.getElementById('font-size-logo1').getContext("2d");
 drawCanvasLogo(logo,"あ","fantasy",50,0,6,"rgb(127,127,127)",0);
 logo = document.getElementById('font-angle-logo').getContext("2d");
-drawCanvasLogo(logo,"あ","fantasy",80,0,6,"rgb(127,127,127)",0);
+drawCanvasLogo(logo,"あ","fantasy",80,0,6,"rgb(127,127,127)",10);
 
 
 
