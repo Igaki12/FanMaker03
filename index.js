@@ -329,9 +329,8 @@ function drawCanvasLogo(context,text,font,size,stroke,thickness,color,angle){
   // context.font = `${size}px ${font}`;
   // context.width = Math.ceil(context.measureText(text).width) + 30;
   if(angle > 0){
-    context.translate(40,-55 * Math.sin(30 * Math.PI / 180));
-    console.log(10*Math.PI / 180);
-    context.rotate(30 * Math.PI / 180);
+    context.translate(-55 * Math.cos(angle * Math.PI / 180),-55 * Math.sin(angle * Math.PI / 180));
+    context.rotate(angle * Math.PI / 180);
   };
   context.lineWidth = thickness;
   context.fillStyle = color;
@@ -347,7 +346,7 @@ function drawCanvasLogo(context,text,font,size,stroke,thickness,color,angle){
       context.strokeStyle = "blue";
     }
     if(strokeTimes === 2){
-      context.strokeStyle = "white";
+      context.strokeStyle = "black";
     }
     context.strokeText(text,15,size);
     strokeTimes--;
@@ -368,7 +367,7 @@ drawCanvasLogo(logo,"あ","fantasy",80,0,6,"rgb(255,63,63)",0);
 logo = document.getElementById('font-size-logo1').getContext("2d");
 drawCanvasLogo(logo,"あ","fantasy",50,0,6,"rgb(127,127,127)",0);
 logo = document.getElementById('font-angle-logo').getContext("2d");
-drawCanvasLogo(logo,"あ","fantasy",80,0,6,"rgb(127,127,127)",10);
+drawCanvasLogo(logo,"あ","fantasy",80,0,6,"rgb(127,127,127)",30);
 
 
 
