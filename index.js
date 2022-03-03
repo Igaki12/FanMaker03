@@ -329,7 +329,7 @@ function drawCanvasLogo(context,text,font,size,stroke,thickness,color,angle){
   // context.font = `${size}px ${font}`;
   // context.width = Math.ceil(context.measureText(text).width) + 30;
   if(angle > 0){
-    context.translate(55 * Math.cos(angle * Math.PI / 180),-55 * Math.sin(angle * Math.PI / 180));
+    context.translate(40 * Math.cos(angle * Math.PI / 180),-40 * Math.sin(angle * Math.PI / 180));
     context.rotate(angle * Math.PI / 180);
   };
   context.lineWidth = thickness;
