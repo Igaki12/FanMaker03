@@ -43,6 +43,7 @@ header > p {
   transition: 300ms;
 }
 #operating-screen {
+  position: absolute;
   width: 100%;
   height: auto;
   margin: 0 auto;
