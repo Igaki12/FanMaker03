@@ -1,3 +1,5 @@
+
+
 const additionalBackgroundOpenBtn = document.getElementById('additional-background-open-btn');
 const additionalBackgroundCloseBtn = document.getElementById('additional-background-close-btn');
 const additionalBackgroundRow = document.getElementById('additional-background-row');
@@ -489,3 +491,15 @@ function dragEnd() {
   document.body.removeEventListener('touchmove', dragMove);
   active.removeEventListener('touchend', dragEnd);
 };
+
+// jsPDFのテスト
+import { jsPDF } from "jspdf";
+
+// Default export is a4 paper, portrait, using millimeters for units
+document.getElementById("print-btn").addEventListener('click', ()=>{
+  const doc = new jsPDF();
+
+  doc.text("Hello world!", 10, 10);
+  doc.save("a4.pdf");
+})
+
